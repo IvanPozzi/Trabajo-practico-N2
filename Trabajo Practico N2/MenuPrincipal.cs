@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace Trabajo_Practico_N2
 {
-    public partial class Form1 : Form
+    public partial class MenuPrincipal : Form
     {
-        public Form1()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Ventana1 ventanaagregar = new Ventana1();
+            ventanaagregar.ShowDialog();  
         }
     }
 }

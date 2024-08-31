@@ -16,7 +16,7 @@ namespace Trabajo_Practico_N2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ventana1());
+            Application.Run(new MenuPrincipal());
         }
     }
 }
