@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn1Agregar = new System.Windows.Forms.Button();
-            this.cajatexto = new System.Windows.Forms.MaskedTextBox();
+            this.txtcodigo = new System.Windows.Forms.MaskedTextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.btnagregararticulo = new System.Windows.Forms.Label();
             this.codarticulo = new System.Windows.Forms.Label();
@@ -37,10 +37,10 @@
             this.Precio = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.Label();
             this.Categoria = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.MaskedTextBox();
+            this.txtmarca = new System.Windows.Forms.ComboBox();
+            this.txtcategoria = new System.Windows.Forms.ComboBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -55,13 +55,13 @@
             this.btn1Agregar.UseVisualStyleBackColor = true;
             this.btn1Agregar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cajatexto
+            // txtcodigo
             // 
-            this.cajatexto.Location = new System.Drawing.Point(158, 61);
-            this.cajatexto.Name = "cajatexto";
-            this.cajatexto.Size = new System.Drawing.Size(100, 26);
-            this.cajatexto.TabIndex = 1;
-            this.cajatexto.Enter += new System.EventHandler(this.maskedTextBox1_Enter);
+            this.txtcodigo.Location = new System.Drawing.Point(158, 61);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(100, 26);
+            this.txtcodigo.TabIndex = 1;
+            this.txtcodigo.Enter += new System.EventHandler(this.maskedTextBox1_Enter);
             // 
             // Nombre
             // 
@@ -126,35 +126,46 @@
             this.Categoria.TabIndex = 8;
             this.Categoria.Text = "Categoria:";
             // 
-            // maskedTextBox1
+            // txtnombre
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(158, 106);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 9;
+            this.txtnombre.Location = new System.Drawing.Point(158, 106);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 26);
+            this.txtnombre.TabIndex = 9;
             // 
-            // comboBox1
+            // txtmarca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(158, 195);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 13;
+            this.txtmarca.FormattingEnabled = true;
+            this.txtmarca.Items.AddRange(new object[] {
+            "samsung",
+            "apple",
+            "sony",
+            "huawei",
+            "motorola"});
+            this.txtmarca.Location = new System.Drawing.Point(158, 195);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.Size = new System.Drawing.Size(121, 28);
+            this.txtmarca.TabIndex = 13;
             // 
-            // comboBox2
+            // txtcategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(158, 243);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 14;
+            this.txtcategoria.FormattingEnabled = true;
+            this.txtcategoria.Items.AddRange(new object[] {
+            "celulares",
+            "televisores",
+            "media",
+            "audio"});
+            this.txtcategoria.Location = new System.Drawing.Point(158, 243);
+            this.txtcategoria.Name = "txtcategoria";
+            this.txtcategoria.Size = new System.Drawing.Size(121, 28);
+            this.txtcategoria.TabIndex = 14;
             // 
-            // textBox2
+            // txtdescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 16;
+            this.txtdescripcion.Location = new System.Drawing.Point(158, 151);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(100, 26);
+            this.txtdescripcion.TabIndex = 16;
             // 
             // numericUpDown1
             // 
@@ -174,10 +185,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 434);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtdescripcion);
+            this.Controls.Add(this.txtcategoria);
+            this.Controls.Add(this.txtmarca);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.Categoria);
             this.Controls.Add(this.Marca);
             this.Controls.Add(this.Precio);
@@ -185,7 +196,7 @@
             this.Controls.Add(this.codarticulo);
             this.Controls.Add(this.btnagregararticulo);
             this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.cajatexto);
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.btn1Agregar);
             this.Name = "Ventana1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -199,7 +210,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn1Agregar;
-        private System.Windows.Forms.MaskedTextBox cajatexto;
+        private System.Windows.Forms.MaskedTextBox txtcodigo;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Label btnagregararticulo;
         private System.Windows.Forms.Label codarticulo;
@@ -207,10 +218,10 @@
         private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.Label Marca;
         private System.Windows.Forms.Label Categoria;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.MaskedTextBox txtnombre;
+        private System.Windows.Forms.ComboBox txtmarca;
+        private System.Windows.Forms.ComboBox txtcategoria;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

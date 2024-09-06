@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using articulo;
 
 namespace Trabajo_Practico_N2
 {
@@ -24,10 +25,14 @@ namespace Trabajo_Practico_N2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Texto = (string)cajatexto.Text;
-            MessageBox.Show("Hola "+ Texto);
+            string codigo_de_articulo=txtcodigo.Text;
+            string Nombre=txtnombre.Text;   
+            string Descripcion=txtdescripcion.Text; 
+            string Marca=txtmarca.Text; 
+            string Categoria=txtcategoria.Text;
+            float Precio = (float)numericUpDown1.Value;
         }
 
-
+ 
     }
 }
