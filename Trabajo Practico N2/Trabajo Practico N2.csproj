@@ -47,6 +47,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="articulo.cs" />
+    <Compile Include="frmVentanaBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaBusqueda.Designer.cs">
+      <DependentUpon>frmVentanaBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanaBusquedaPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaBusquedaPorCategoria.Designer.cs">
+      <DependentUpon>frmVentanaBusquedaPorCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanaBusquedaPorMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaBusquedaPorMarca.Designer.cs">
+      <DependentUpon>frmVentanaBusquedaPorMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanaDetalleArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaDetalleArticulo.Designer.cs">
+      <DependentUpon>frmVentanaDetalleArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanaEliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaEliminarArticulo.Designer.cs">
+      <DependentUpon>frmVentanaEliminarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +92,21 @@
       <DependentUpon>Ventana1.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="frmVentanaBusqueda.resx">
+      <DependentUpon>frmVentanaBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanaBusquedaPorCategoria.resx">
+      <DependentUpon>frmVentanaBusquedaPorCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanaBusquedaPorMarca.resx">
+      <DependentUpon>frmVentanaBusquedaPorMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanaDetalleArticulo.resx">
+      <DependentUpon>frmVentanaDetalleArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanaEliminarArticulo.resx">
+      <DependentUpon>frmVentanaEliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
