@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listadearticulos));
             this.dgvarticulos = new System.Windows.Forms.DataGridView();
             this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
@@ -37,6 +38,7 @@
             // 
             // dgvarticulos
             // 
+            this.dgvarticulos.BackgroundColor = System.Drawing.Color.Aquamarine;
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.Location = new System.Drawing.Point(53, 12);
             this.dgvarticulos.Name = "dgvarticulos";
@@ -53,6 +55,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvarticulos);
             this.Name = "listadearticulos";

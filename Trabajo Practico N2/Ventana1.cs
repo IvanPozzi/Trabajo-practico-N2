@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Trabajo_Practico_N2
 {
-    public partial class Ventana1 : Form
+    /*public partial class Ventana1 : Form
     {
         public Ventana1()
         {
@@ -43,5 +43,5 @@ namespace Trabajo_Practico_N2
         {
             this.Close();
         }
-    }
+    }*/
 }
