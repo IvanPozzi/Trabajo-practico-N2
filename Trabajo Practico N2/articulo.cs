@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace articulo
+namespace Trabajo_Practico_N2
 {
-    public class articulo
+    public class Articulo
     {
         public string codigo_de_articulo {  get; set; } 
         public string Nombre {  get; set; } 
         public string Descripcion {  get; set; }
-        public string Marca {  get; set; }
-        public string Categoria {  get; set; }  
+        public int Marca {  get; set; }
+        public int Categoria {  get; set; }  
         public float Precio {  get; set; }
     }
 }

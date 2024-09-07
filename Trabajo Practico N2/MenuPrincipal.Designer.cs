@@ -73,6 +73,7 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Lista de Articulos";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnBuscar
             // 

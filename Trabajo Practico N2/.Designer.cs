@@ -42,12 +42,13 @@
             this.txtcategoria = new System.Windows.Forms.ComboBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btncancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1Agregar
             // 
-            this.btn1Agregar.Location = new System.Drawing.Point(158, 350);
+            this.btn1Agregar.Location = new System.Drawing.Point(72, 362);
             this.btn1Agregar.Name = "btn1Agregar";
             this.btn1Agregar.Size = new System.Drawing.Size(100, 45);
             this.btn1Agregar.TabIndex = 0;
@@ -179,11 +180,22 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
             this.numericUpDown1.TabIndex = 17;
             // 
+            // btncancel
+            // 
+            this.btncancel.Location = new System.Drawing.Point(232, 362);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(100, 45);
+            this.btncancel.TabIndex = 18;
+            this.btncancel.Text = "cancelar";
+            this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
+            // 
             // Ventana1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 434);
+            this.Controls.Add(this.btncancel);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.txtcategoria);
@@ -223,5 +235,6 @@
         private System.Windows.Forms.ComboBox txtcategoria;
         private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btncancel;
     }
 }

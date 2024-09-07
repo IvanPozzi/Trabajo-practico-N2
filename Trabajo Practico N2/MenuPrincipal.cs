@@ -24,5 +24,11 @@ namespace Trabajo_Practico_N2
             Ventana1 ventanaagregar = new Ventana1();
             ventanaagregar.ShowDialog();  
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            listadearticulos listadearticulos = new listadearticulos();
+            listadearticulos.ShowDialog();
+        }
     }
 }
