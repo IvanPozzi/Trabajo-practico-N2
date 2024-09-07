@@ -13,6 +13,7 @@ namespace Trabajo_Practico_N2
 {
     public partial class listadearticulos : Form
     {
+        private List<Articulo> listaarticu;
         public listadearticulos()
         {
             InitializeComponent();
@@ -22,17 +23,27 @@ namespace Trabajo_Practico_N2
         private void dgvArticulos_load(object sender,EventArgs e)
         {   
             registrodearticulos registrodearticulos = new registrodearticulos();
-            List<Articulo> articulos = registrodearticulos.listar();
-            if (articulos.Count > 0)
-            {
-                dgvarticulos.DataSource = articulos;
-            }
-            else
-            {
-                MessageBox.Show("No se encontraron artículos.");
-            }
+            listaarticu = registrodearticulos.listar(); 
+            dgvarticulos.DataSource = listaarticu;
+            ptbimagen.Load(listaarticu[0].imagen.url);
+         
         }
 
-    
+   
+
+        private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                ptbimagen.Load(seleccionado.imagen.url);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se encontro la imagen");
+
+            }
+
+        }
     }
 }

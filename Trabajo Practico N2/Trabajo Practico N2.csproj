@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="articulo.cs" />
+    <Compile Include="imagen.cs" />
     <Compile Include="listadearticulos.cs">
       <SubType>Form</SubType>
     </Compile>
