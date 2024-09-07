@@ -25,10 +25,29 @@ namespace Trabajo_Practico_N2
             ventanaagregar.ShowDialog();  
         }
 
+<<<<<<< HEAD
         private void btnListar_Click(object sender, EventArgs e)
         {
             listadearticulos listadearticulos = new listadearticulos();
             listadearticulos.ShowDialog();
+=======
+        private void btnverdetalle_Click(object sender, EventArgs e)
+        {
+            frmVentanaDetalleArticulo ventana = new frmVentanaDetalleArticulo();
+            ventana.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmVentanaEliminarArticulo ventana = new frmVentanaEliminarArticulo();
+            ventana.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmVentanaBusqueda ventana = new frmVentanaBusqueda();
+            ventana.ShowDialog();
+>>>>>>> 540cea173fbe33725cbee4fd92a79a745f702616
         }
     }
 }
