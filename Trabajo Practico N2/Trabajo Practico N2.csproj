@@ -47,6 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="articulo.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaNegocio.cs" />
+    <Compile Include="frmListadoCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoCategoria.Designer.cs">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuCategorias.Designer.cs">
+      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="imagen.cs" />
     <Compile Include="listadearticulos.cs">
       <SubType>Form</SubType>
@@ -84,6 +98,7 @@
     <Compile Include="frmVentanaEliminarArticulo.Designer.cs">
       <DependentUpon>frmVentanaEliminarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marca.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +109,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrodearticulos.cs" />
     <Compile Include="Ventana1.cs" />
+    <EmbeddedResource Include="frmListadoCategoria.resx">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuCategorias.resx">
+      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listadearticulos.resx">
       <DependentUpon>listadearticulos.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,7 +8,6 @@ namespace Trabajo_Practico_N2
 {
     internal class Marca
     {
-        public int Id { get; set; }
         public string Descripcion { get; set; }
     }
 }
