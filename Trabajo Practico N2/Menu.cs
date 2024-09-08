@@ -25,8 +25,8 @@ namespace Trabajo_Practico_N2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMenuCategorias menuCategorias = new frmMenuCategorias();
-            menuCategorias.ShowDialog();
+            frmListadoCategoria listadoCategoria = new frmListadoCategoria();
+            listadoCategoria.ShowDialog();
         }
     }
 }

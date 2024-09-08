@@ -55,12 +55,6 @@
     <Compile Include="frmListadoCategoria.Designer.cs">
       <DependentUpon>frmListadoCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuCategorias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenuCategorias.Designer.cs">
-      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
-    </Compile>
     <Compile Include="imagen.cs" />
     <Compile Include="listadearticulos.cs">
       <SubType>Form</SubType>
@@ -111,9 +105,6 @@
     <Compile Include="Ventana1.cs" />
     <EmbeddedResource Include="frmListadoCategoria.resx">
       <DependentUpon>frmListadoCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuCategorias.resx">
-      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listadearticulos.resx">
       <DependentUpon>listadearticulos.cs</DependentUpon>
