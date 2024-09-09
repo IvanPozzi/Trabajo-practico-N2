@@ -28,5 +28,11 @@ namespace Trabajo_Practico_N2
             frmListadoCategoria listadoCategoria = new frmListadoCategoria();
             listadoCategoria.ShowDialog();
         }
+
+        private void btnagregararticulo_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulo alta = new frmAgregarArticulo();
+            alta.ShowDialog();
+        }
     }
 }
