@@ -17,7 +17,7 @@ namespace Trabajo_Practico_N2
         {
             get { return lector; }
         }
-
+        //se crea la conexxion a la base de datos en el constructor
         public AccesoDatos()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");

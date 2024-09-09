@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
 namespace Trabajo_Practico_N2
 {
@@ -12,28 +11,23 @@ namespace Trabajo_Practico_N2
         public List<Categoria> listar()
         {
             List<Categoria> listaCategorias = new List<Categoria>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Descripcion From Categorias";
-                comando.Connection = conexion;
+                datos.setearConsulta("Select Id, Descripcion From Categorias");
+                datos.ejecutarLectura();
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read()) 
+                while (datos.Lector.Read()) 
                 {
                     Categoria aux = new Categoria();
-                    aux.Descripcion = (string)lector["Descripcion"].ToString();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"].ToString();
 
                     listaCategorias.Add(aux);
                 }
-                conexion.Close();
+                datos.cerrarConexion();
                 return listaCategorias;
 
             }
@@ -41,6 +35,9 @@ namespace Trabajo_Practico_N2
             {
 
                 throw ex;
+            }
+            finally {
+                datos.cerrarConexion();
             }
         }
     }
