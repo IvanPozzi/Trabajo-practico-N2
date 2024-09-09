@@ -61,5 +61,27 @@ namespace Trabajo_Practico_N2
             }
 
         }
+
+        public void modificar(Categoria categoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("update Categorias set Descripcion = @Descripcion where id = @Id");
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
+                datos.setearParametro("@Id", categoria.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

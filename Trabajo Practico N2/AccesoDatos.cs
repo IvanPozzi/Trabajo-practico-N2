@@ -32,6 +32,11 @@ namespace Trabajo_Practico_N2
             comando.CommandText = consulta;
         }
 
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         //Ejecuta la consulta Sql y guarda el resultado en el lector
         public void ejecutarLectura()
         {

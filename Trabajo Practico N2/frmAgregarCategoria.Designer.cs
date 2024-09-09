@@ -96,6 +96,7 @@
             this.Name = "frmAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarCategoria";
+            this.Load += new System.EventHandler(this.frmAgregarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

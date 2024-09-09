@@ -31,5 +31,13 @@ namespace Trabajo_Practico_N2
             frmAgregarCategoria formAgregar = new frmAgregarCategoria();
             formAgregar.ShowDialog();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado;
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            frmAgregarCategoria formModificar = new frmAgregarCategoria(seleccionado);
+            formModificar.ShowDialog();
+        }
     }
 }
