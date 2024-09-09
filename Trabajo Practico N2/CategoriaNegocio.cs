@@ -33,6 +33,8 @@ namespace Trabajo_Practico_N2
 
                     listaCategorias.Add(aux);
                 }
+                conexion.Close();
+                return listaCategorias;
 
             }
             catch (Exception ex)
@@ -40,8 +42,6 @@ namespace Trabajo_Practico_N2
 
                 throw ex;
             }
-
-            return listaCategorias;
         }
     }
 }

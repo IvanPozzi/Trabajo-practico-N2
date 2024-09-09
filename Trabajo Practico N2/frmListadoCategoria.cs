@@ -21,6 +21,7 @@ namespace Trabajo_Practico_N2
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             dgvCategorias.DataSource = negocio.listar();
+            dgvCategorias.Columns["Id"].Visible = false;
         }
     }
 }
