@@ -100,6 +100,7 @@
       <DependentUpon>frmVentanaEliminarArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
