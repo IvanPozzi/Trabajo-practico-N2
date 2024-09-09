@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Trabajo_Practico_N2
 {
@@ -45,6 +46,23 @@ namespace Trabajo_Practico_N2
 
                 throw ex;
             }
+        }
+
+        //ejecuta una accion en la base de datos
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
         public void cerrarConexion()

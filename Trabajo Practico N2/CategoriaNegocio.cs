@@ -40,5 +40,26 @@ namespace Trabajo_Practico_N2
                 datos.cerrarConexion();
             }
         }
+
+        public void agregar(Categoria nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Insert Into Categorias(Descripcion) values('" + nueva.Descripcion +"')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

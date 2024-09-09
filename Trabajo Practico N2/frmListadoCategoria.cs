@@ -21,7 +21,15 @@ namespace Trabajo_Practico_N2
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             dgvCategorias.DataSource = negocio.listar();
+
+            //Ocultar la columna Id
             dgvCategorias.Columns["Id"].Visible = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategoria formAgregar = new frmAgregarCategoria();
+            formAgregar.ShowDialog();
         }
     }
 }
