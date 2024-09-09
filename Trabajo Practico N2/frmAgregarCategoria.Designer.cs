@@ -95,7 +95,7 @@
             this.MinimumSize = new System.Drawing.Size(352, 278);
             this.Name = "frmAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAgregarCategoria";
+            this.Text = "Nueva Categoria";
             this.Load += new System.EventHandler(this.frmAgregarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

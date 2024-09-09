@@ -22,6 +22,7 @@ namespace Trabajo_Practico_N2
         {
             InitializeComponent();
             this.categoria = categoria;
+            Text = "Modificar categoria";
 
         }
 
