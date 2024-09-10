@@ -51,15 +51,15 @@ namespace Trabajo_Practico_N2
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             MarcaNegocio negocio = new MarcaNegocio();
-            Marca seleccionada;
+            Marca seleccionado;
             try
             {
                 DialogResult resultado = MessageBox.Show("¿Seguro que quiere eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (resultado == DialogResult.Yes)
                 {
-                    seleccionada = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionada.Id);
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
                     MessageBox.Show("Eliminado exitosamente");
                     Cargar();
                 }

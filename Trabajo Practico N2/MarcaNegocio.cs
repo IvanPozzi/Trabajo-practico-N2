@@ -91,7 +91,7 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                datos.setearConsulta("delete from Marca where Id = @Id");
+                datos.setearConsulta("delete from Marcas where Id = @Id");
                 datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
 
