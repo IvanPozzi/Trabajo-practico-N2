@@ -34,5 +34,11 @@ namespace Trabajo_Practico_N2
             frmListadoMarcas listadoMarcas = new frmListadoMarcas();
             listadoMarcas.ShowDialog();
         }
+
+        private void btnagregararticulo_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulo alta = new frmAgregarArticulo();
+            alta.ShowDialog();
+        }
     }
 }

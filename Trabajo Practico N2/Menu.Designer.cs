@@ -59,7 +59,7 @@
             this.btnlistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlistar.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlistar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnlistar.Location = new System.Drawing.Point(82, 69);
+            this.btnlistar.Location = new System.Drawing.Point(62, 56);
             this.btnlistar.Margin = new System.Windows.Forms.Padding(2);
             this.btnlistar.Name = "btnlistar";
             this.btnlistar.Size = new System.Drawing.Size(184, 53);
@@ -74,7 +74,7 @@
             this.btnbuscararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnbuscararticulo.Location = new System.Drawing.Point(270, 69);
+            this.btnbuscararticulo.Location = new System.Drawing.Point(279, 54);
             this.btnbuscararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnbuscararticulo.Name = "btnbuscararticulo";
             this.btnbuscararticulo.Size = new System.Drawing.Size(184, 53);
@@ -88,13 +88,14 @@
             this.btnagregararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnagregararticulo.Location = new System.Drawing.Point(82, 138);
+            this.btnagregararticulo.Location = new System.Drawing.Point(62, 112);
             this.btnagregararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregararticulo.Name = "btnagregararticulo";
             this.btnagregararticulo.Size = new System.Drawing.Size(184, 53);
             this.btnagregararticulo.TabIndex = 3;
             this.btnagregararticulo.Text = "AGREGAR ARTICULO";
             this.btnagregararticulo.UseVisualStyleBackColor = false;
+            this.btnagregararticulo.Click += new System.EventHandler(this.btnagregararticulo_Click);
             // 
             // btnmodificararticulo
             // 
@@ -102,7 +103,7 @@
             this.btnmodificararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnmodificararticulo.Location = new System.Drawing.Point(270, 138);
+            this.btnmodificararticulo.Location = new System.Drawing.Point(279, 112);
             this.btnmodificararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodificararticulo.Name = "btnmodificararticulo";
             this.btnmodificararticulo.Size = new System.Drawing.Size(184, 53);
@@ -116,7 +117,7 @@
             this.btneliminararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btneliminararticulo.Location = new System.Drawing.Point(82, 208);
+            this.btneliminararticulo.Location = new System.Drawing.Point(62, 169);
             this.btneliminararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminararticulo.Name = "btneliminararticulo";
             this.btneliminararticulo.Size = new System.Drawing.Size(184, 53);
@@ -130,7 +131,7 @@
             this.btnverdetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnverdetalle.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnverdetalle.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnverdetalle.Location = new System.Drawing.Point(270, 208);
+            this.btnverdetalle.Location = new System.Drawing.Point(279, 180);
             this.btnverdetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnverdetalle.Name = "btnverdetalle";
             this.btnverdetalle.Size = new System.Drawing.Size(184, 53);
@@ -144,8 +145,8 @@
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnCategoria.Location = new System.Drawing.Point(82, 320);
-            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCategoria.Location = new System.Drawing.Point(62, 306);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(184, 53);
             this.btnCategoria.TabIndex = 7;
@@ -159,7 +160,7 @@
             this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarca.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarca.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnMarca.Location = new System.Drawing.Point(270, 320);
+            this.btnMarca.Location = new System.Drawing.Point(279, 306);
             this.btnMarca.Margin = new System.Windows.Forms.Padding(2);
             this.btnMarca.Name = "btnMarca";
             this.btnMarca.Size = new System.Drawing.Size(184, 53);
@@ -173,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(533, 484);
+            this.ClientSize = new System.Drawing.Size(506, 393);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btnverdetalle);
