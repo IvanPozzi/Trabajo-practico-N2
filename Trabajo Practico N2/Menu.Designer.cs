@@ -37,6 +37,7 @@
             this.btneliminararticulo = new System.Windows.Forms.Button();
             this.btnverdetalle = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnMarca = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtmenu
@@ -59,7 +60,7 @@
             this.btnlistar.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlistar.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnlistar.Location = new System.Drawing.Point(82, 69);
-            this.btnlistar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlistar.Margin = new System.Windows.Forms.Padding(2);
             this.btnlistar.Name = "btnlistar";
             this.btnlistar.Size = new System.Drawing.Size(184, 53);
             this.btnlistar.TabIndex = 1;
@@ -74,7 +75,7 @@
             this.btnbuscararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscararticulo.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnbuscararticulo.Location = new System.Drawing.Point(270, 69);
-            this.btnbuscararticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnbuscararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnbuscararticulo.Name = "btnbuscararticulo";
             this.btnbuscararticulo.Size = new System.Drawing.Size(184, 53);
             this.btnbuscararticulo.TabIndex = 2;
@@ -88,7 +89,7 @@
             this.btnagregararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregararticulo.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnagregararticulo.Location = new System.Drawing.Point(82, 138);
-            this.btnagregararticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnagregararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregararticulo.Name = "btnagregararticulo";
             this.btnagregararticulo.Size = new System.Drawing.Size(184, 53);
             this.btnagregararticulo.TabIndex = 3;
@@ -102,7 +103,7 @@
             this.btnmodificararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificararticulo.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnmodificararticulo.Location = new System.Drawing.Point(270, 138);
-            this.btnmodificararticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmodificararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodificararticulo.Name = "btnmodificararticulo";
             this.btnmodificararticulo.Size = new System.Drawing.Size(184, 53);
             this.btnmodificararticulo.TabIndex = 4;
@@ -116,7 +117,7 @@
             this.btneliminararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminararticulo.ForeColor = System.Drawing.Color.DarkOrange;
             this.btneliminararticulo.Location = new System.Drawing.Point(82, 208);
-            this.btneliminararticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btneliminararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminararticulo.Name = "btneliminararticulo";
             this.btneliminararticulo.Size = new System.Drawing.Size(184, 53);
             this.btneliminararticulo.TabIndex = 5;
@@ -130,7 +131,7 @@
             this.btnverdetalle.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnverdetalle.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnverdetalle.Location = new System.Drawing.Point(270, 208);
-            this.btnverdetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnverdetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnverdetalle.Name = "btnverdetalle";
             this.btnverdetalle.Size = new System.Drawing.Size(184, 53);
             this.btnverdetalle.TabIndex = 6;
@@ -152,12 +153,28 @@
             this.btnCategoria.UseVisualStyleBackColor = false;
             this.btnCategoria.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnMarca
+            // 
+            this.btnMarca.BackColor = System.Drawing.Color.Transparent;
+            this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarca.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarca.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnMarca.Location = new System.Drawing.Point(270, 320);
+            this.btnMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Size = new System.Drawing.Size(184, 53);
+            this.btnMarca.TabIndex = 8;
+            this.btnMarca.Text = "Marcas";
+            this.btnMarca.UseVisualStyleBackColor = false;
+            this.btnMarca.Click += new System.EventHandler(this.btnMarca_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(533, 484);
+            this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btnverdetalle);
             this.Controls.Add(this.btneliminararticulo);
@@ -166,7 +183,7 @@
             this.Controls.Add(this.btnbuscararticulo);
             this.Controls.Add(this.btnlistar);
             this.Controls.Add(this.txtmenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -185,5 +202,6 @@
         private System.Windows.Forms.Button btneliminararticulo;
         private System.Windows.Forms.Button btnverdetalle;
         private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnMarca;
     }
 }

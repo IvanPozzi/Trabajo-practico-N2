@@ -10,31 +10,29 @@ using System.Windows.Forms;
 
 namespace Trabajo_Practico_N2
 {
-    public partial class frmAgregarCategoria : Form
+    public partial class frmAgregarMarcas : Form
     {
-        Categoria categoria = null;
-        public frmAgregarCategoria()
+        Marca marca = null;
+        public frmAgregarMarcas()
         {
             InitializeComponent();
         }
 
-        public frmAgregarCategoria(Categoria categoria)
+        public frmAgregarMarcas(Marca marca)
         {
             InitializeComponent();
-            this.categoria = categoria;
-            Text = "Modificar categoria";
-
+            this.marca = marca;
+            Text = "Modificar Marca";
         }
 
-        private void frmAgregarCategoria_Load(object sender, EventArgs e)
+        private void frmAgregarMarcas_Load(object sender, EventArgs e)
         {
             try
             {
-                if(this.categoria != null)
+                if (this.marca != null)
                 {
-                    lblTitulo.Text = "Modificar categoria";
-                    txtCategoria.Text = categoria.Descripcion.ToString();
-
+                    lblTitulo.Text = "Modificar Marca";
+                    txtCategoria.Text = marca.Descripcion.ToString();
                 }
 
             }
@@ -43,34 +41,33 @@ namespace Trabajo_Practico_N2
                 MessageBox.Show(ex.ToString());
                 throw;
             }
-        }
 
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
-            CategoriaNegocio negocio = new CategoriaNegocio();
+            MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
-                if(categoria == null)
+                if (marca == null)
                 {
-                    categoria = new Categoria();
+                    marca = new Marca();
                 }
-                categoria.Descripcion = txtCategoria.Text;
+                marca.Descripcion = txtCategoria.Text;
 
-                if (categoria.Id != 0)
+                if (marca.Id != 0)
                 {
-                    negocio.modificar(categoria);
+                    negocio.modificar(marca);
                 }
                 else
                 {
-                    negocio.agregar(categoria);
+                    negocio.agregar(marca);
                 }
 
                 MessageBox.Show("Agregado exitosamente");
@@ -83,7 +80,5 @@ namespace Trabajo_Practico_N2
             }
 
         }
-
-        
     }
 }

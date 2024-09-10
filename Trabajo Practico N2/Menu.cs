@@ -28,5 +28,11 @@ namespace Trabajo_Practico_N2
             frmListadoCategoria listadoCategoria = new frmListadoCategoria();
             listadoCategoria.ShowDialog();
         }
+
+        private void btnMarca_Click(object sender, EventArgs e)
+        {
+            frmListadoMarcas listadoMarcas = new frmListadoMarcas();
+            listadoMarcas.ShowDialog();
+        }
     }
 }
