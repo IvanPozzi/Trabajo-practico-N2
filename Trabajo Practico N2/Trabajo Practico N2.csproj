@@ -83,6 +83,7 @@
       <DependentUpon>frmListadoMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="imagen.cs" />
+    <Compile Include="Imagenesnegocio.cs" />
     <Compile Include="listadearticulos.cs">
       <SubType>Form</SubType>
     </Compile>
