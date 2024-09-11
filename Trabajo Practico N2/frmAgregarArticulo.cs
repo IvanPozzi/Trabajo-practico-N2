@@ -17,7 +17,7 @@ namespace Trabajo_Practico_N2
         {
             InitializeComponent();
         }
-        
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

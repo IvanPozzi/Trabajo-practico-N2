@@ -86,7 +86,7 @@ namespace Trabajo_Practico_N2
 
         private void txtCategoria_TextChanged(object sender, EventArgs e)
         {
-
-        }
+        
     }
+}
 }
