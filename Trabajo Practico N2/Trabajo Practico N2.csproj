@@ -46,7 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos.cs" />
     <Compile Include="articulo.cs" />
+    <Compile Include="Articulonegocio.cs" />
+    <Compile Include="CargarCombo.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaNegocio.cs" />
+    <Compile Include="frmAgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarArticulo.Designer.cs">
+      <DependentUpon>frmAgregarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCategoria.Designer.cs">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarMarcas.Designer.cs">
+      <DependentUpon>frmAgregarMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoCategoria.Designer.cs">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoMarcas.Designer.cs">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="imagen.cs" />
     <Compile Include="listadearticulos.cs">
       <SubType>Form</SubType>
@@ -84,6 +119,8 @@
     <Compile Include="frmVentanaEliminarArticulo.Designer.cs">
       <DependentUpon>frmVentanaEliminarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marca.cs" />
+    <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +131,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registrodearticulos.cs" />
     <Compile Include="Ventana1.cs" />
+    <EmbeddedResource Include="frmAgregarArticulo.resx">
+      <DependentUpon>frmAgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarCategoria.resx">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarMarcas.resx">
+      <DependentUpon>frmAgregarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoCategoria.resx">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoMarcas.resx">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listadearticulos.resx">
       <DependentUpon>listadearticulos.cs</DependentUpon>
     </EmbeddedResource>
