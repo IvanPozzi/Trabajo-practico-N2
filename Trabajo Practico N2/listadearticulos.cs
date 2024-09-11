@@ -22,7 +22,7 @@ namespace Trabajo_Practico_N2
 
         private void dgvArticulos_load(object sender,EventArgs e)
         {   
-            registrodearticulos registrodearticulos = new registrodearticulos();
+            Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
             ptbimagen.Load(listaarticu[0].imagen.url);
@@ -43,6 +43,11 @@ namespace Trabajo_Practico_N2
                 MessageBox.Show("no se encontro la imagen");
 
             }
+
+        }
+
+        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
