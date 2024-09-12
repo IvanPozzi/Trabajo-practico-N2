@@ -22,5 +22,23 @@ namespace Trabajo_Practico_N2
             listadearticulos listadearticulos = new listadearticulos();
             listadearticulos.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmListadoCategoria listadoCategoria = new frmListadoCategoria();
+            listadoCategoria.ShowDialog();
+        }
+
+        private void btnMarca_Click(object sender, EventArgs e)
+        {
+            frmListadoMarcas listadoMarcas = new frmListadoMarcas();
+            listadoMarcas.ShowDialog();
+        }
+
+        private void btnagregararticulo_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulo alta = new frmAgregarArticulo();
+            alta.ShowDialog();
+        }
     }
 }

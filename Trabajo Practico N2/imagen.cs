@@ -19,5 +19,10 @@ namespace Trabajo_Practico_N2
         {
             return url;
         }
+
+        public string imgNoEncontrada()
+        {
+            return "https://www.foton.ro/client/img/image-not-found.png";
+        }
     }
 }

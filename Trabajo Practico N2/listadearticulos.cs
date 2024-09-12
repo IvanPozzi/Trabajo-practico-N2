@@ -22,10 +22,19 @@ namespace Trabajo_Practico_N2
 
         private void dgvArticulos_load(object sender,EventArgs e)
         {   
-            registrodearticulos registrodearticulos = new registrodearticulos();
+            Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
-            ptbimagen.Load(listaarticu[0].imagen.url);
+
+            try
+            {
+                ptbimagen.Load(listaarticu[0].imagen.url);
+            }
+            catch (Exception ex)
+            {
+                ptbimagen.Load("https://www.smarttools.com.mx/wp-content/uploads/2019/05/imagen-no-disponible.png");
+
+            }
          
         }
 
@@ -33,17 +42,31 @@ namespace Trabajo_Practico_N2
 
         private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
         {
+            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
             try
             {
-                Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+               
                 ptbimagen.Load(seleccionado.imagen.url);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("no se encontro la imagen");
+                ptbimagen.Load(seleccionado.imagen.imgNoEncontrada()); ;
 
             }
 
         }
+
+        private void listadearticulos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerDetalles_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            frmVentanaDetalleArticulo detalleArticulo = new frmVentanaDetalleArticulo(seleccionado);
+            detalleArticulo.ShowDialog();
+        }
+
     }
 }
