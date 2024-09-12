@@ -150,7 +150,10 @@
             // 
             // cmbmarca
             // 
+<<<<<<< HEAD
             this.cmbmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+>>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.cmbmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbmarca.FormattingEnabled = true;
             this.cmbmarca.Location = new System.Drawing.Point(287, 313);
@@ -161,7 +164,10 @@
             // 
             // cmbcategoria
             // 
+<<<<<<< HEAD
             this.cmbcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+>>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.cmbcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbcategoria.FormattingEnabled = true;
             this.cmbcategoria.Location = new System.Drawing.Point(287, 394);
