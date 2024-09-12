@@ -46,14 +46,16 @@ namespace Trabajo_Practico_N2
 
         }
 
-        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void listadearticulos_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void listadearticulos_Load(object sender, EventArgs e)
+        private void btnVerDetalles_Click(object sender, EventArgs e)
         {
-
+            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            frmVentanaDetalleArticulo detalleArticulo = new frmVentanaDetalleArticulo(seleccionado);
+            detalleArticulo.ShowDialog();
         }
     }
 }
