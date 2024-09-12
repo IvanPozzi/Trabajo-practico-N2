@@ -12,10 +12,13 @@ namespace Trabajo_Practico_N2
 {
     public partial class frmVentanaDetalleArticulo : Form
     {
+        private Articulo articuloActual = null;
+        
         public frmVentanaDetalleArticulo(Articulo articulo)
         {
             InitializeComponent();
-            Cargar(articulo);
+            this.articuloActual = articulo;
+            Cargar(articuloActual);
         }
 
         private void frmVentanaDetalleArticulo_Load(object sender, EventArgs e)
@@ -29,8 +32,8 @@ namespace Trabajo_Practico_N2
             {
                 lblCodigoArticulo.Text = articulo.codigo_de_articulo;
                 lblNombreArticulo.Text = articulo.Nombre;
-                lblMarcaArticulo.Text = articulo.Marca.ToString();
-                lblCategoriaArticulo.Text = articulo.Categoria.ToString();
+                lblMarcaArticulo.Text = articulo.descripcionMarca;
+                lblCategoriaArticulo.Text = articulo.descripcionCategoria;
                 lblPrecioArticulo.Text = articulo.Precio.ToString();
                 lblDescripcionArticulo.Text = articulo.Descripcion;
 
@@ -50,6 +53,12 @@ namespace Trabajo_Practico_N2
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulo modificarArticulo = new frmAgregarArticulo(articuloActual);
+            modificarArticulo.ShowDialog();
         }
     }
 }

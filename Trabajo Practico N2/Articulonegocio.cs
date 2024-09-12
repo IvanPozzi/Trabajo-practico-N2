@@ -167,7 +167,7 @@ namespace Trabajo_Practico_N2
             {
                 datos.setearConsulta(@"
             SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, 
-                   A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio, I.ImagenUrl 
+                   A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio, I.Id AS IdImagen, I.ImagenUrl 
             FROM ARTICULOS A
             LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo
             LEFT JOIN MARCAS M ON A.IdMarca = M.Id
@@ -188,15 +188,17 @@ namespace Trabajo_Practico_N2
                     aux.descripcionCategoria = datos.Lector.IsDBNull(7) ? null : datos.Lector.GetString(7);
                     aux.Precio = datos.Lector.IsDBNull(8) ? 0 : (float)datos.Lector.GetDecimal(8);
                     aux.imagen = new Imagen();
+                    aux.imagen.Id = datos.Lector.IsDBNull(9) ? 0 : datos.Lector.GetInt32(9);
+                    aux.imagen.Articulo = aux.Id;
 
-                    if (!datos.Lector.IsDBNull(9))
+                    if (!datos.Lector.IsDBNull(10))
                     {
-                        aux.imagen.url = datos.Lector.GetString(9);
+                        aux.imagen.url = datos.Lector.GetString(10);
                     }
                     else
                     {
                         //si el valor de imagen es null muestra una imagen de relleno
-                        aux.imagen.url = aux.imagen.imgNoEncontrada();
+                        aux.imagen.url ="";
                     }
 
                     listaArticulo.Add(aux);
@@ -285,6 +287,30 @@ namespace Trabajo_Practico_N2
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public int buscarPorCodigo(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select Id from Articulos where Codigo = @CodigoArticulo");
+                datos.setearParametro("@CodigoArticulo", codigo);
+                datos.ejecutarLectura();
+                int valor = (int)datos.Lector["Id"];
+
+                return valor;
+            }
+            catch (Exception ex)
+            {
+
                 throw ex;
             }
             finally

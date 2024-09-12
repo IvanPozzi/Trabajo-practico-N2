@@ -43,13 +43,14 @@
             this.lblPrecioArticulo = new System.Windows.Forms.Label();
             this.lblNombreArticulo = new System.Windows.Forms.Label();
             this.ptbImagenDetalle = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(492, 372);
+            this.btnCerrar.Location = new System.Drawing.Point(946, 424);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(74, 32);
@@ -192,11 +193,24 @@
             this.ptbImagenDetalle.TabIndex = 16;
             this.ptbImagenDetalle.TabStop = false;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(37, 424);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(93, 32);
+            this.btnModificar.TabIndex = 17;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // frmVentanaDetalleArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 487);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.ptbImagenDetalle);
             this.Controls.Add(this.lblMarcaArticulo);
             this.Controls.Add(this.lblMarca);
@@ -238,5 +252,6 @@
         private System.Windows.Forms.Label lblPrecioArticulo;
         private System.Windows.Forms.Label lblNombreArticulo;
         private System.Windows.Forms.PictureBox ptbImagenDetalle;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

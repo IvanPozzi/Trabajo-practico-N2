@@ -7,15 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace Trabajo_Practico_N2
 {
     public partial class frmAgregarArticulo : Form
     {
+        Articulo articulo = null;
         public frmAgregarArticulo()
         {
             InitializeComponent();
+        }
+
+        public frmAgregarArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            lblAgregarArticuloTitulo.Text = "Modificar Articulo";
+            Text = "Modificar articulo";
         }
 
 
@@ -28,27 +38,51 @@ namespace Trabajo_Practico_N2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo nuevoArticulo = new Articulo();
+            if(this.articulo == null)
+            {
+                articulo = new Articulo();
+            }
+            
+
+
+
             Articulonegocio negocio = new Articulonegocio();
             Imagen imagen = new Imagen();
             ImagenesNegocio nuevaimagen = new ImagenesNegocio();
 
             try
             {
-                nuevoArticulo.codigo_de_articulo = txtcadigo.Text;
-                nuevoArticulo.Nombre = txtnombre.Text;
-                nuevoArticulo.Descripcion = txtdescripcion.Text;
+                articulo.codigo_de_articulo = txtcadigo.Text;
+                articulo.Nombre = txtnombre.Text;
+                articulo.Descripcion = txtdescripcion.Text;
 
-                nuevoArticulo.Categoria = (int)cmbcategoria.SelectedValue;
-                nuevoArticulo.Marca = (int)cmbmarca.SelectedValue;
-                nuevoArticulo.Precio = float.Parse(txtprecio.Text);
-                imagen.url=txturl.Text; 
+                articulo.Categoria = (int)cmbcategoria.SelectedValue;
+                articulo.Marca = (int)cmbmarca.SelectedValue;
+                articulo.Precio = float.Parse(txtprecio.Text);
 
-                //nuevoArticulo.imagen.url=txturl.Text; 
 
-                negocio.agregar(nuevoArticulo);
-                imagen.Id = nuevoArticulo.Id;
-                nuevaimagen.agregar(imagen);
+                imagen.url=txturl.Text;
+
+                //articulo.imagen.url=txturl.Text; 
+                
+
+                if (articulo.Id == 0)
+                {
+                    negocio.agregar(articulo);
+                    if(imagen.ToString() != "")
+                    {
+                        imagen.Articulo =  negocio.buscarPorCodigo(articulo.codigo_de_articulo); //se busca el id del articulo para 
+                        nuevaimagen.agregar(imagen);
+                    }
+                }
+                else
+                {
+                    imagen.Id = articulo.imagen.Id;
+                    negocio.modificar(articulo);
+                    nuevaimagen.modificar(imagen);
+                }
+
+
 
 
 
@@ -68,9 +102,33 @@ namespace Trabajo_Practico_N2
         {
             CargarCombo cargarCombo = new CargarCombo();
 
-            
+
             cargarCombo.cargarCategorias(cmbcategoria);
             cargarCombo.cargarMarcas(cmbmarca);
+
+            if (articulo != null)
+            {
+                try
+                {
+                    txtcadigo.Text = articulo.codigo_de_articulo;
+                    txtnombre.Text = articulo.Nombre;
+                    txtdescripcion.Text = articulo.Descripcion;
+
+                    cmbcategoria.SelectedValue = articulo.Categoria;
+                    cmbmarca.SelectedValue = articulo.Marca;
+                    
+                    txtprecio.Text = articulo.Precio.ToString();
+                    txturl.Text = articulo.imagen.url;
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+            
 
         }
         private void LimpiarCampos()

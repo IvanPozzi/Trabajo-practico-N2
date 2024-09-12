@@ -48,7 +48,7 @@ namespace Trabajo_Practico_N2
             {
                 datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
                 datos.setearParametro("@IdArticulo", nueva.Articulo);
-                datos.setearParametro("@ImagenUrl", nueva.url);
+                datos.setearParametro("@ImagenUrl", nueva.ToString());
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -67,10 +67,10 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                datos.setearConsulta("UPDATE IMAGENES SET IdArticulo = @IdArticulo, ImagenUrl = @ImagenUrl WHERE Id = @Id");
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @IdArticulo");
                 datos.setearParametro("@IdArticulo", imagen.Articulo);
-                datos.setearParametro("@ImagenUrl", imagen.url);
-                datos.setearParametro("@Id", imagen.Id);
+                datos.setearParametro("@ImagenUrl", imagen.ToString());
+                //datos.setearParametro("@Id", imagen.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -102,6 +102,8 @@ namespace Trabajo_Practico_N2
                 datos.cerrarConexion();
             }
         }
+
+        
     }
 }
 
