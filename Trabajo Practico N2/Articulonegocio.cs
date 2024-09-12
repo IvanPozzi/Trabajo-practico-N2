@@ -51,7 +51,7 @@ namespace Trabajo_Practico_N2
             }
         }*/
 
-        public List<Articulo> listar()
+        /*public List<Articulo> listar()
         {
             List<Articulo> listaArticulo = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
@@ -99,8 +99,64 @@ namespace Trabajo_Practico_N2
             {
                 datos.cerrarConexion();
             }
-        }
+        }*/
+        public List<Articulo> listar()
+        {
+            List<Articulo> listaArticulo = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearConsulta(@"
+            SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, 
+                   A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio, I.ImagenUrl 
+            FROM ARTICULOS A
+            LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo
+            LEFT JOIN MARCAS M ON A.IdMarca = M.Id
+            LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id");
+
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = datos.Lector.GetInt32(0);
+                    aux.codigo_de_articulo = datos.Lector.GetString(1);
+                    aux.Nombre = datos.Lector.GetString(2);
+                    aux.Descripcion = datos.Lector.GetString(3);
+                    aux.Marca = datos.Lector.GetInt32(4);
+                    aux.descripcionMarca = datos.Lector.GetString(5); // Descripción de la marca
+                    aux.Categoria = datos.Lector.GetInt32(6);
+                    aux.descripcionCategoria = datos.Lector.GetString(7); // Descripción de la categoría
+
+                    // Obtener el precio como decimal y luego convertirlo a float si es necesario
+                    aux.Precio = (float)datos.Lector.GetDecimal(8); // Columna Precio
+
+                    if (!datos.Lector.IsDBNull(9)) // Verificar si "ImagenUrl" no es DBNull
+                    {
+                        aux.imagen = new Imagen();
+                        aux.imagen.url = datos.Lector.GetString(9); // Columna "ImagenUrl"
+                    }
+                    else
+                    {
+                        aux.imagen = null; // Si no hay imagen, asignar null
+                    }
+
+                    listaArticulo.Add(aux);
+                }
+
+                datos.cerrarConexion();
+                return listaArticulo;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
         public void agregar(Articulo nuevo)
         {

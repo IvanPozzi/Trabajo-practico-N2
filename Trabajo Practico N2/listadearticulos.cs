@@ -50,5 +50,10 @@ namespace Trabajo_Practico_N2
         {
 
         }
+
+        private void listadearticulos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

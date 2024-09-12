@@ -16,8 +16,13 @@ namespace Trabajo_Practico_N2
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Marca { get; set; }
+        public string descripcionMarca { get; set; }
         public int Categoria { get; set; }
+        public string descripcionCategoria { get; set; }
         public float Precio { get; set; }
         public Imagen imagen { get; set; }
+     
+
+        
     }
 }

@@ -90,6 +90,7 @@
             this.Name = "listadearticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listadearticulos";
+            this.Load += new System.EventHandler(this.listadearticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
