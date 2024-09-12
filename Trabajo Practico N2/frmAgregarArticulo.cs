@@ -30,6 +30,8 @@ namespace Trabajo_Practico_N2
         {
             Articulo nuevoArticulo = new Articulo();
             Articulonegocio negocio = new Articulonegocio();
+            Imagen imagen = new Imagen();
+            ImagenesNegocio nuevaimagen = new ImagenesNegocio();
 
             try
             {
@@ -40,8 +42,16 @@ namespace Trabajo_Practico_N2
                 nuevoArticulo.Categoria = (int)cmbcategoria.SelectedValue;
                 nuevoArticulo.Marca = (int)cmbmarca.SelectedValue;
                 nuevoArticulo.Precio = float.Parse(txtprecio.Text);
+                imagen.url=txturl.Text; 
+
+                //nuevoArticulo.imagen.url=txturl.Text; 
 
                 negocio.agregar(nuevoArticulo);
+                imagen.Id = nuevoArticulo.Id;
+                nuevaimagen.agregar(imagen);
+
+
+
 
                 MessageBox.Show("Artículo agregado exitosamente.");
 
