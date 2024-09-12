@@ -187,15 +187,16 @@ namespace Trabajo_Practico_N2
                     aux.Categoria = datos.Lector.IsDBNull(6) ? 0 : datos.Lector.GetInt32(6);
                     aux.descripcionCategoria = datos.Lector.IsDBNull(7) ? null : datos.Lector.GetString(7);
                     aux.Precio = datos.Lector.IsDBNull(8) ? 0 : (float)datos.Lector.GetDecimal(8);
+                    aux.imagen = new Imagen();
 
                     if (!datos.Lector.IsDBNull(9))
                     {
-                        aux.imagen = new Imagen();
                         aux.imagen.url = datos.Lector.GetString(9);
                     }
                     else
                     {
-                        aux.imagen = null;
+                        //si el valor de imagen es null muestra una imagen de relleno
+                        aux.imagen.url = aux.imagen.imgNoEncontrada();
                     }
 
                     listaArticulo.Add(aux);

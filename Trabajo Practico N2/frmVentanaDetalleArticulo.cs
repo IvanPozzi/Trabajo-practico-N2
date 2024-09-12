@@ -33,22 +33,18 @@ namespace Trabajo_Practico_N2
                 lblCategoriaArticulo.Text = articulo.Categoria.ToString();
                 lblPrecioArticulo.Text = articulo.Precio.ToString();
                 lblDescripcionArticulo.Text = articulo.Descripcion;
-                cargarImagenUrl(articulo.imagen.url);
-            }
-        }
 
-        private void cargarImagenUrl(string img)
-        {
-            try
-            {
-                ptbImagenDetalle.Load(img);
-            }
-            catch (Exception)
-            {
+                try
+                {
+                    ptbImagenDetalle.Load(articulo.imagen.url);
+                }
+                catch (Exception)
+                {
 
-                ptbImagenDetalle.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNK7-n-r_w_qCEIjsnu8VXMBamUkSmLUr9Eg&s");
+                    ptbImagenDetalle.Load(articulo.imagen.imgNoEncontrada());
+                }
+                
             }
-            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
