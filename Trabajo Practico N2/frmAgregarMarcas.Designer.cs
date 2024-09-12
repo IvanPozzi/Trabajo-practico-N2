@@ -92,6 +92,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmAgregarMarcas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Nueva Marca";
             this.Load += new System.EventHandler(this.frmAgregarMarcas_Load);
             this.ResumeLayout(false);
