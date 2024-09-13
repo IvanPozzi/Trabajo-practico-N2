@@ -55,6 +55,25 @@ namespace Trabajo_Practico_N2
             }
 
         }
+        private void Cargar()
+        {
+            Articulonegocio registrodearticulos = new Articulonegocio();
+            listaarticu = registrodearticulos.listar();
+            dgvarticulos.DataSource = listaarticu;
+
+            try
+            {
+                ptbimagen.Load(listaarticu[0].imagen.url);
+            }
+            catch (Exception ex)
+            {
+                ptbimagen.Load("https://www.smarttools.com.mx/wp-content/uploads/2019/05/imagen-no-disponible.png");
+
+            }
+
+
+
+        }
 
         private void listadearticulos_Load(object sender, EventArgs e)
         {
@@ -68,5 +87,32 @@ namespace Trabajo_Practico_N2
             detalleArticulo.ShowDialog();
         }
 
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            
+           
+
+            Articulonegocio negocio = new Articulonegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    Cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

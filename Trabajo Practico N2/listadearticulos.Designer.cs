@@ -35,6 +35,7 @@
             this.txtimagen = new System.Windows.Forms.Label();
             this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnVerDetalles = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
@@ -43,7 +44,6 @@
             // dgvarticulos
             // 
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvarticulos.Location = new System.Drawing.Point(52, 12);
             this.dgvarticulos.MultiSelect = false;
@@ -52,29 +52,15 @@
             this.dgvarticulos.RowTemplate.Height = 28;
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(783, 440);
-=======
-            this.dgvarticulos.Location = new System.Drawing.Point(35, 8);
-            this.dgvarticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvarticulos.Name = "dgvarticulos";
-            this.dgvarticulos.RowHeadersWidth = 62;
-            this.dgvarticulos.RowTemplate.Height = 28;
-            this.dgvarticulos.Size = new System.Drawing.Size(522, 286);
->>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.dgvarticulos.TabIndex = 0;
+            this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // ptbimagen
             // 
-<<<<<<< HEAD
             this.ptbimagen.Location = new System.Drawing.Point(861, 65);
             this.ptbimagen.Name = "ptbimagen";
             this.ptbimagen.Size = new System.Drawing.Size(318, 289);
-=======
-            this.ptbimagen.Location = new System.Drawing.Point(574, 42);
-            this.ptbimagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ptbimagen.Name = "ptbimagen";
-            this.ptbimagen.Size = new System.Drawing.Size(212, 188);
->>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.ptbimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbimagen.TabIndex = 1;
             this.ptbimagen.TabStop = false;
@@ -87,14 +73,9 @@
             this.txtimagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtimagen.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtimagen.ForeColor = System.Drawing.Color.Orange;
-<<<<<<< HEAD
             this.txtimagen.Location = new System.Drawing.Point(927, 14);
-=======
-            this.txtimagen.Location = new System.Drawing.Point(618, 9);
-            this.txtimagen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.txtimagen.Name = "txtimagen";
-            this.txtimagen.Size = new System.Drawing.Size(128, 18);
+            this.txtimagen.Size = new System.Drawing.Size(184, 25);
             this.txtimagen.TabIndex = 2;
             this.txtimagen.Text = "IMAGEN DEL ARTICULO";
             // 
@@ -104,36 +85,36 @@
             // 
             // btnVerDetalles
             // 
-<<<<<<< HEAD
             this.btnVerDetalles.Location = new System.Drawing.Point(52, 488);
-            this.btnVerDetalles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerDetalles.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnVerDetalles.Name = "btnVerDetalles";
             this.btnVerDetalles.Size = new System.Drawing.Size(130, 45);
-=======
-            this.btnVerDetalles.Location = new System.Drawing.Point(35, 317);
-            this.btnVerDetalles.Name = "btnVerDetalles";
-            this.btnVerDetalles.Size = new System.Drawing.Size(87, 29);
->>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
             this.btnVerDetalles.TabIndex = 3;
             this.btnVerDetalles.Text = "Detalles";
             this.btnVerDetalles.UseVisualStyleBackColor = true;
             this.btnVerDetalles.Click += new System.EventHandler(this.btnVerDetalles_Click);
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Location = new System.Drawing.Point(246, 488);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(133, 45);
+            this.btneliminar.TabIndex = 4;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
             // listadearticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1208, 551);
-=======
-            this.ClientSize = new System.Drawing.Size(805, 358);
->>>>>>> efb2d1064dc4bda75ec2e41d2a32596d0589b003
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnVerDetalles);
             this.Controls.Add(this.txtimagen);
             this.Controls.Add(this.ptbimagen);
             this.Controls.Add(this.dgvarticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "listadearticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listadearticulos";
@@ -152,5 +133,6 @@
         private System.Windows.Forms.PictureBox ptbimagen;
         private System.Windows.Forms.Label txtimagen;
         private System.Windows.Forms.Button btnVerDetalles;
+        private System.Windows.Forms.Button btneliminar;
     }
 }

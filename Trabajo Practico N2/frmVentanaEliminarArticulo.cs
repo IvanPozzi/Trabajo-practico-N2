@@ -16,5 +16,10 @@ namespace Trabajo_Practico_N2
         {
             InitializeComponent();
         }
+
+        private void btnSI_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

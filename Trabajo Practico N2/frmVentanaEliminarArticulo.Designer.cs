@@ -41,35 +41,38 @@
             // pctrBoxArticuloImagen
             // 
             this.pctrBoxArticuloImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pctrBoxArticuloImagen.Location = new System.Drawing.Point(608, 131);
+            this.pctrBoxArticuloImagen.Location = new System.Drawing.Point(684, 164);
+            this.pctrBoxArticuloImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pctrBoxArticuloImagen.Name = "pctrBoxArticuloImagen";
-            this.pctrBoxArticuloImagen.Size = new System.Drawing.Size(268, 190);
+            this.pctrBoxArticuloImagen.Size = new System.Drawing.Size(301, 236);
             this.pctrBoxArticuloImagen.TabIndex = 10;
             this.pctrBoxArticuloImagen.TabStop = false;
             // 
             // txtBoxObjetoArticulo
             // 
-            this.txtBoxObjetoArticulo.Location = new System.Drawing.Point(33, 131);
+            this.txtBoxObjetoArticulo.Location = new System.Drawing.Point(37, 164);
+            this.txtBoxObjetoArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxObjetoArticulo.Multiline = true;
             this.txtBoxObjetoArticulo.Name = "txtBoxObjetoArticulo";
-            this.txtBoxObjetoArticulo.Size = new System.Drawing.Size(527, 240);
+            this.txtBoxObjetoArticulo.Size = new System.Drawing.Size(592, 299);
             this.txtBoxObjetoArticulo.TabIndex = 9;
             // 
             // txtBoxCodArticulo
             // 
             this.txtBoxCodArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCodArticulo.Location = new System.Drawing.Point(280, 45);
+            this.txtBoxCodArticulo.Location = new System.Drawing.Point(315, 56);
+            this.txtBoxCodArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxCodArticulo.Name = "txtBoxCodArticulo";
-            this.txtBoxCodArticulo.Size = new System.Drawing.Size(156, 27);
+            this.txtBoxCodArticulo.Size = new System.Drawing.Size(175, 31);
             this.txtBoxCodArticulo.TabIndex = 8;
             // 
             // lblCodigoDeArticulo
             // 
             this.lblCodigoDeArticulo.AutoSize = true;
             this.lblCodigoDeArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoDeArticulo.Location = new System.Drawing.Point(68, 48);
+            this.lblCodigoDeArticulo.Location = new System.Drawing.Point(76, 60);
             this.lblCodigoDeArticulo.Name = "lblCodigoDeArticulo";
-            this.lblCodigoDeArticulo.Size = new System.Drawing.Size(178, 25);
+            this.lblCodigoDeArticulo.Size = new System.Drawing.Size(218, 29);
             this.lblCodigoDeArticulo.TabIndex = 7;
             this.lblCodigoDeArticulo.Text = "Código de Artículo:";
             // 
@@ -77,37 +80,40 @@
             // 
             this.lblCartelPreguntaEliminar.AutoSize = true;
             this.lblCartelPreguntaEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCartelPreguntaEliminar.Location = new System.Drawing.Point(141, 421);
+            this.lblCartelPreguntaEliminar.Location = new System.Drawing.Point(159, 526);
             this.lblCartelPreguntaEliminar.Name = "lblCartelPreguntaEliminar";
-            this.lblCartelPreguntaEliminar.Size = new System.Drawing.Size(270, 25);
+            this.lblCartelPreguntaEliminar.Size = new System.Drawing.Size(333, 29);
             this.lblCartelPreguntaEliminar.TabIndex = 11;
             this.lblCartelPreguntaEliminar.Text = "¿Quiere eliminar ese artículo?";
             // 
             // btnSI
             // 
             this.btnSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSI.Location = new System.Drawing.Point(171, 480);
+            this.btnSI.Location = new System.Drawing.Point(192, 600);
+            this.btnSI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSI.Name = "btnSI";
-            this.btnSI.Size = new System.Drawing.Size(81, 39);
+            this.btnSI.Size = new System.Drawing.Size(91, 49);
             this.btnSI.TabIndex = 12;
             this.btnSI.Text = "SI";
             this.btnSI.UseVisualStyleBackColor = true;
+            this.btnSI.Click += new System.EventHandler(this.btnSI_Click);
             // 
             // btnNo
             // 
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.Location = new System.Drawing.Point(312, 480);
+            this.btnNo.Location = new System.Drawing.Point(351, 600);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(80, 39);
+            this.btnNo.Size = new System.Drawing.Size(90, 49);
             this.btnNo.TabIndex = 13;
             this.btnNo.Text = "NO";
             this.btnNo.UseVisualStyleBackColor = true;
             // 
             // frmVentanaEliminarArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(1132, 901);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnSI);
             this.Controls.Add(this.lblCartelPreguntaEliminar);
@@ -115,6 +121,7 @@
             this.Controls.Add(this.txtBoxObjetoArticulo);
             this.Controls.Add(this.txtBoxCodArticulo);
             this.Controls.Add(this.lblCodigoDeArticulo);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVentanaEliminarArticulo";
             this.Text = "frmVentanaEliminarArticulo";
             ((System.ComponentModel.ISupportInitialize)(this.pctrBoxArticuloImagen)).EndInit();

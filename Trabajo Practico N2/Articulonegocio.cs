@@ -216,7 +216,7 @@ namespace Trabajo_Practico_N2
                 datos.cerrarConexion();
             }
         }
-
+        
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -294,7 +294,7 @@ namespace Trabajo_Practico_N2
                 datos.cerrarConexion();
             }
         }
-
+   
         public int buscarPorCodigo(string codigo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -304,9 +304,15 @@ namespace Trabajo_Practico_N2
                 datos.setearConsulta("select Id from Articulos where Codigo = @CodigoArticulo");
                 datos.setearParametro("@CodigoArticulo", codigo);
                 datos.ejecutarLectura();
-                int valor = (int)datos.Lector["Id"];
+                Articulo aux = new Articulo();
 
-                return valor;
+                if (datos.Lector.Read())
+                {
+                    aux.Id = datos.Lector.GetInt32(0);
+                }
+
+                
+                    return aux.Id;
             }
             catch (Exception ex)
             {
