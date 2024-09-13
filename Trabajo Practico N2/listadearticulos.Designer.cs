@@ -33,9 +33,10 @@
             this.dgvarticulos = new System.Windows.Forms.DataGridView();
             this.ptbimagen = new System.Windows.Forms.PictureBox();
             this.txtimagen = new System.Windows.Forms.Label();
-            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnVerDetalles = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
@@ -79,16 +80,12 @@
             this.txtimagen.TabIndex = 2;
             this.txtimagen.Text = "IMAGEN DEL ARTICULO";
             // 
-            // articuloBindingSource
-            // 
-            this.articuloBindingSource.DataSource = typeof(Trabajo_Practico_N2.Articulo);
-            // 
             // btnVerDetalles
             // 
-            this.btnVerDetalles.Location = new System.Drawing.Point(52, 488);
+            this.btnVerDetalles.Location = new System.Drawing.Point(52, 479);
             this.btnVerDetalles.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnVerDetalles.Name = "btnVerDetalles";
-            this.btnVerDetalles.Size = new System.Drawing.Size(130, 45);
+            this.btnVerDetalles.Size = new System.Drawing.Size(219, 55);
             this.btnVerDetalles.TabIndex = 3;
             this.btnVerDetalles.Text = "Detalles";
             this.btnVerDetalles.UseVisualStyleBackColor = true;
@@ -96,13 +93,27 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(246, 488);
+            this.btneliminar.Location = new System.Drawing.Point(346, 483);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(133, 45);
+            this.btneliminar.Size = new System.Drawing.Size(216, 51);
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnmodificar
+            // 
+            this.btnmodificar.Location = new System.Drawing.Point(620, 481);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(215, 51);
+            this.btnmodificar.TabIndex = 5;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataSource = typeof(Trabajo_Practico_N2.Articulo);
             // 
             // listadearticulos
             // 
@@ -110,6 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1208, 551);
+            this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnVerDetalles);
             this.Controls.Add(this.txtimagen);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Label txtimagen;
         private System.Windows.Forms.Button btnVerDetalles;
         private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btnmodificar;
     }
 }

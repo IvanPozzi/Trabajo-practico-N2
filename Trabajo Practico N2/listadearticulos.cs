@@ -12,12 +12,17 @@ using System.Windows.Forms;
 namespace Trabajo_Practico_N2
 {
     public partial class listadearticulos : Form
-    {
+    {   
         private List<Articulo> listaarticu;
         public listadearticulos()
         {
             InitializeComponent();
             this.Load += new EventHandler(dgvArticulos_load);
+        }
+        public listadearticulos(Articulo articulo)
+        {
+            InitializeComponent();
+            //this.Load += new EventHandler(dgvArticulos_load);
         }
 
         private void dgvArticulos_load(object sender,EventArgs e)
@@ -112,6 +117,18 @@ namespace Trabajo_Practico_N2
 
         private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+        private Articulo articuloActual = null;
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            //Articulo articuloActual = null;
+            frmAgregarArticulo modificarArticulo = new frmAgregarArticulo(seleccionado);
+            modificarArticulo.ShowDialog();
+            Cargar();
+       
+
 
         }
     }

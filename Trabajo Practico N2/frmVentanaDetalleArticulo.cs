@@ -54,9 +54,10 @@ namespace Trabajo_Practico_N2
         {
             Close();
         }
-
+        
         private void btnModificar_Click(object sender, EventArgs e)
         {
+           
             frmAgregarArticulo modificarArticulo = new frmAgregarArticulo(articuloActual);
             modificarArticulo.ShowDialog();
         }
