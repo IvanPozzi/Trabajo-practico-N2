@@ -90,6 +90,7 @@ namespace Trabajo_Practico_N2
                 MessageBox.Show("Artículo agregado exitosamente.");
 
                 LimpiarCampos();
+                
             }
             catch (Exception ex)
             {
@@ -131,6 +132,7 @@ namespace Trabajo_Practico_N2
             
 
         }
+  
         private void LimpiarCampos()
         {
             txtcadigo.Clear();
