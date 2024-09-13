@@ -126,6 +126,7 @@ namespace Trabajo_Practico_N2
             
 
         }
+  
         private void LimpiarCampos()
         {
             txtcadigo.Clear();
