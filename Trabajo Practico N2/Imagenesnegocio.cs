@@ -67,8 +67,8 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @IdArticulo");
-                datos.setearParametro("@IdArticulo", imagen.Articulo);
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = @Id");
+                datos.setearParametro("@Id", imagen.Id);
                 datos.setearParametro("@ImagenUrl", imagen.ToString());
                 //datos.setearParametro("@Id", imagen.Id);
                 datos.ejecutarAccion();
