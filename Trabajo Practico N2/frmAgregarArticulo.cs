@@ -71,7 +71,7 @@ namespace Trabajo_Practico_N2
                     negocio.agregar(articulo);
                     if(imagen.ToString() != "")
                     {
-                        imagen.Articulo =  negocio.buscarPorCodigo(articulo.codigo_de_articulo); //se busca el id del articulo para 
+                        imagen.Articulo =  (int)negocio.buscarPorCodigo(articulo.codigo_de_articulo); //se busca el id del articulo para 
                         nuevaimagen.agregar(imagen);
                     }
                 }
@@ -82,14 +82,9 @@ namespace Trabajo_Practico_N2
                     nuevaimagen.modificar(imagen);
                 }
 
-
-
-
-
-
                 MessageBox.Show("Artículo agregado exitosamente.");
 
-                LimpiarCampos();
+                Close();
             }
             catch (Exception ex)
             {
