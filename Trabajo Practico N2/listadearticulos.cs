@@ -47,16 +47,21 @@ namespace Trabajo_Practico_N2
 
         private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
-            try
+            if (dgvarticulos.CurrentRow != null)
             {
                
-                ptbimagen.Load(seleccionado.imagen.url);
-            }
-            catch (Exception ex)
-            {
-                ptbimagen.Load(seleccionado.imagen.imgNoEncontrada()); ;
+               
+                Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                try
+                {
 
+                    ptbimagen.Load(seleccionado.imagen.url);
+                }
+                catch (Exception ex)
+                {
+                    ptbimagen.Load(seleccionado.imagen.imgNoEncontrada()); ;
+
+                }
             }
 
         }
@@ -139,6 +144,32 @@ namespace Trabajo_Practico_N2
             agregar.ShowDialog();
            // ImagenesNegocio nuevaimagen = new ImagenesNegocio();
             //nuevaimagen.agregarotra();
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> filtrada;
+            string filtro = txtbuscador.Text;
+
+            if (filtro != "")
+            {
+                filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper())||x.descripcionMarca.ToUpper().Contains(filtro.ToUpper()));
+                
+            }
+            else {
+
+                filtrada = listaarticu;
+
+            }
+            dgvarticulos.DataSource = null;
+            dgvarticulos.DataSource = filtrada;
+            ocultarcolumnas();
+        }
+        public void ocultarcolumnas()
+        {
+            dgvarticulos.Columns["Marca"].Visible = false;
+            dgvarticulos.Columns["Categoria"].Visible = false;
+            
         }
     }
 }

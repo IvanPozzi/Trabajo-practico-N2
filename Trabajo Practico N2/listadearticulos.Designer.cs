@@ -40,6 +40,9 @@
             this.btnagregarimagen = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblfiltro = new System.Windows.Forms.Label();
+            this.txtbuscador = new System.Windows.Forms.TextBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
@@ -55,7 +58,7 @@
             this.dgvarticulos.RowHeadersWidth = 62;
             this.dgvarticulos.RowTemplate.Height = 28;
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvarticulos.Size = new System.Drawing.Size(783, 440);
+            this.dgvarticulos.Size = new System.Drawing.Size(783, 378);
             this.dgvarticulos.TabIndex = 0;
             this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
@@ -146,12 +149,42 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // lblfiltro
+            // 
+            this.lblfiltro.AutoSize = true;
+            this.lblfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfiltro.Location = new System.Drawing.Point(46, 411);
+            this.lblfiltro.Name = "lblfiltro";
+            this.lblfiltro.Size = new System.Drawing.Size(93, 32);
+            this.lblfiltro.TabIndex = 9;
+            this.lblfiltro.Text = "Filtro :";
+            // 
+            // txtbuscador
+            // 
+            this.txtbuscador.Location = new System.Drawing.Point(203, 417);
+            this.txtbuscador.Name = "txtbuscador";
+            this.txtbuscador.Size = new System.Drawing.Size(373, 26);
+            this.txtbuscador.TabIndex = 10;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Location = new System.Drawing.Point(620, 403);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(215, 54);
+            this.btnbuscar.TabIndex = 11;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
             // listadearticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1208, 551);
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.txtbuscador);
+            this.Controls.Add(this.lblfiltro);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnagregarimagen);
@@ -184,5 +217,8 @@
         private System.Windows.Forms.Button btnagregarimagen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblfiltro;
+        private System.Windows.Forms.TextBox txtbuscador;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

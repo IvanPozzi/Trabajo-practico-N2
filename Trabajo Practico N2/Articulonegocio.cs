@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Trabajo_Practico_N2
 {
     public class Articulonegocio
@@ -324,5 +325,6 @@ namespace Trabajo_Practico_N2
                 datos.cerrarConexion();
             }
         }
+    
     }
 }
