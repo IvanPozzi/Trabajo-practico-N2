@@ -167,9 +167,8 @@ namespace Trabajo_Practico_N2
             {
                 datos.setearConsulta(@"
             SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, 
-                   A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio, I.Id AS IdImagen, I.ImagenUrl 
+                   A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio 
             FROM ARTICULOS A
-            LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo
             LEFT JOIN MARCAS M ON A.IdMarca = M.Id
             LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id");
 
@@ -188,13 +187,21 @@ namespace Trabajo_Practico_N2
                     aux.Categoria = datos.Lector.IsDBNull(7) ? null : datos.Lector.GetString(7);
                     aux.Precio = datos.Lector.IsDBNull(8) ? 0 : (float)datos.Lector.GetDecimal(8);
 
+                    ImagenesNegocio negocioImagen = new ImagenesNegocio();
+                    aux.Imagen = new List<Imagen>();
+                    aux.Imagen = negocioImagen.listarPorIdArticulo(aux.Id);
+
+                    /*
                     Imagen imagen = new Imagen();
                     imagen.Id = datos.Lector.IsDBNull(9) ? 0 : datos.Lector.GetInt32(9);
                     imagen.Articulo = aux.Id;
                     imagen.url = datos.Lector.IsDBNull(10) ? "" : datos.Lector.GetString(10);
+                    
                     aux.Imagen = new List<Imagen>();
                     aux.Imagen.Add(imagen);
+                    */
                     listaArticulo.Add(aux);
+                    
                 }
 
                 return listaArticulo;

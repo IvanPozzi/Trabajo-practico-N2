@@ -60,7 +60,8 @@ namespace Trabajo_Practico_N2
             }
             catch (Exception ex)
             {
-                ptbimagen.Load(seleccionado.Imagen[0].imgNoEncontrada()); ;
+                Imagen imagenPorDefecto = new Imagen();
+                ptbimagen.Load(imagenPorDefecto.imgNoEncontrada());
 
             }
 
