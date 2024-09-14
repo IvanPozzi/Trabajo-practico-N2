@@ -53,7 +53,7 @@ namespace Trabajo_Practico_N2
             try
             {
                 articulo.codigo_de_articulo = txtcadigo.Text;
-                articulo.Nombre = txtnombre.Text;
+                articulo.Nombre = txtnombre.Text;   
                 articulo.Descripcion = txtdescripcion.Text;
 
                 articulo.Categoria = (int)cmbcategoria.SelectedValue;
@@ -62,6 +62,7 @@ namespace Trabajo_Practico_N2
 
 
                 imagen.url=txturl.Text;
+                imagen.Id = articulo.imagen.Id;
 
                 //articulo.imagen.url=txturl.Text; 
                 
@@ -77,9 +78,21 @@ namespace Trabajo_Practico_N2
                 }
                 else
                 {
-                    imagen.Id = articulo.imagen.Id;
+                    if(imagen.url != "" && imagen.ToString() != null)
+                    {
+                        if(imagen.Id == 0)
+                        {
+                            imagen.Articulo = articulo.Id;
+                            nuevaimagen.agregar(imagen);
+                        }
+                        else
+                        { 
+                            nuevaimagen.modificar(imagen);
+                        }
+                        
+
+                    }
                     negocio.modificar(articulo);
-                    nuevaimagen.modificar(imagen);
                 }
 
                 MessageBox.Show("Artículo agregado exitosamente.");

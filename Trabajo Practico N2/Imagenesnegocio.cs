@@ -61,6 +61,8 @@ namespace Trabajo_Practico_N2
             }
         }
 
+
+
         public void modificar(Imagen imagen)
         {
             AccesoDatos datos = new AccesoDatos();

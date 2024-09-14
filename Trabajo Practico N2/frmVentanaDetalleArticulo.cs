@@ -26,7 +26,7 @@ namespace Trabajo_Practico_N2
 
         }
 
-        private void Cargar(Articulo articulo)
+        public void Cargar(Articulo articulo)
         {
             if(articulo.Id != null)
             {
@@ -57,7 +57,8 @@ namespace Trabajo_Practico_N2
         
         private void btnModificar_Click(object sender, EventArgs e)
         {
-           
+            
+            
             frmAgregarArticulo modificarArticulo = new frmAgregarArticulo(articuloActual);
             modificarArticulo.ShowDialog();
         }

@@ -304,15 +304,15 @@ namespace Trabajo_Practico_N2
                 datos.setearConsulta("select Id from Articulos where Codigo = @CodigoArticulo");
                 datos.setearParametro("@CodigoArticulo", codigo);
                 datos.ejecutarLectura();
-                Articulo aux = new Articulo();
+                int Id= 0;
 
                 if (datos.Lector.Read())
                 {
-                    aux.Id = datos.Lector.GetInt32(0);
+                    Id = datos.Lector.GetInt32(0);
                 }
 
                 
-                    return aux.Id;
+                    return Id;
             }
             catch (Exception ex)
             {

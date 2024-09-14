@@ -131,5 +131,14 @@ namespace Trabajo_Practico_N2
 
 
         }
+
+        private void btnagregarimagen_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            frmAgregarimagen agregar=new frmAgregarimagen(seleccionado);
+            agregar.ShowDialog();
+           // ImagenesNegocio nuevaimagen = new ImagenesNegocio();
+            //nuevaimagen.agregarotra();
+        }
     }
 }
