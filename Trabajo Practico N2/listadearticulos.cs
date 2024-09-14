@@ -162,7 +162,7 @@ namespace Trabajo_Practico_N2
             List<Articulo> filtrada;
             string filtro = txtbuscador.Text;
 
-            if (filtro != "")
+            if (filtro.Length>=2)
             {
                 filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.descripcionMarca.ToUpper().Contains(filtro.ToUpper()));
 
