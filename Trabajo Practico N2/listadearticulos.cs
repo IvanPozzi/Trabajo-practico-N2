@@ -14,6 +14,9 @@ namespace Trabajo_Practico_N2
     public partial class listadearticulos : Form
     {   
         private List<Articulo> listaarticu;
+        private Articulo seleccionado;
+        private int ItemImagen = 0;
+        int limiteItem;
         public listadearticulos()
         {
             InitializeComponent();
@@ -26,7 +29,8 @@ namespace Trabajo_Practico_N2
         }
 
         private void dgvArticulos_load(object sender,EventArgs e)
-        {   
+        {
+            ItemImagen = 0;
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
@@ -38,7 +42,8 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                ptbimagen.Load(listaarticu[0].Imagen[0].url);
+                ptbimagen.Load(listaarticu[0].Imagen[ItemImagen].url);
+                limitarCarrousel(listaarticu[0].Imagen);
             }
             catch (Exception ex)
             {
@@ -52,11 +57,12 @@ namespace Trabajo_Practico_N2
 
         private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+            
             try
             {
-
-                ptbimagen.Load(seleccionado.Imagen[0].url);
+                ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
+                limitarCarrousel(seleccionado.Imagen);
             }
             catch (Exception ex)
             {
@@ -71,10 +77,13 @@ namespace Trabajo_Practico_N2
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar();
             dgvarticulos.DataSource = listaarticu;
+            btnImagenAnterior.Visible = false;
 
             try
             {
                 ptbimagen.Load(listaarticu[0].Imagen[0].url);
+                limitarCarrousel(listaarticu[0].Imagen);
+                ItemImagen = 0;
             }
             catch (Exception ex)
             {
@@ -116,10 +125,6 @@ namespace Trabajo_Practico_N2
             }
         }
 
-        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private Articulo articuloActual = null;
         private void btnmodificar_Click(object sender, EventArgs e)
         {
@@ -140,6 +145,61 @@ namespace Trabajo_Practico_N2
             agregar.ShowDialog();
            // ImagenesNegocio nuevaimagen = new ImagenesNegocio();
             //nuevaimagen.agregarotra();
+        }
+
+        private void btnImagenSiguiente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ItemImagen < limiteItem)
+                {
+                    ItemImagen++;
+                    ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
+                    btnImagenAnterior.Visible = true;
+
+                    if (ItemImagen == limiteItem)
+                    {
+                        btnImagenSiguiente.Visible = false;
+                    }
+
+                }
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void limitarCarrousel(List<Imagen> listaImagenes)
+        {
+            limiteItem = listaImagenes.Count()-1;
+        }
+
+        private void btnImagenAnterior_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ItemImagen > 0)
+                {
+                    ItemImagen--;
+                    ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
+                    btnImagenSiguiente.Visible = true;
+
+                    if (ItemImagen == 0)
+                    {
+                        btnImagenAnterior.Visible = false;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

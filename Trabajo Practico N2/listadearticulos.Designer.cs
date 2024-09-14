@@ -35,10 +35,10 @@
             this.btnVerDetalles = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
-            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnagregarimagen = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnImagenAnterior = new System.Windows.Forms.Button();
+            this.btnImagenSiguiente = new System.Windows.Forms.Button();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
@@ -57,7 +57,6 @@
             this.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvarticulos.Size = new System.Drawing.Size(697, 357);
             this.dgvarticulos.TabIndex = 0;
-            this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
             this.dgvarticulos.SelectionChanged += new System.EventHandler(this.dgvarticulos_SelectionChanged);
             // 
             // ptbimagen
@@ -104,10 +103,6 @@
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
-            // articuloBindingSource
-            // 
-            this.articuloBindingSource.DataSource = typeof(Trabajo_Practico_N2.Articulo);
-            // 
             // btnagregarimagen
             // 
             this.btnagregarimagen.Location = new System.Drawing.Point(898, 465);
@@ -119,25 +114,31 @@
             this.btnagregarimagen.UseVisualStyleBackColor = true;
             this.btnagregarimagen.Click += new System.EventHandler(this.btnagregarimagen_Click);
             // 
-            // button1
+            // btnImagenAnterior
             // 
-            this.button1.Location = new System.Drawing.Point(898, 429);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 32);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.Location = new System.Drawing.Point(887, 430);
+            this.btnImagenAnterior.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImagenAnterior.Name = "btnImagenAnterior";
+            this.btnImagenAnterior.Size = new System.Drawing.Size(68, 32);
+            this.btnImagenAnterior.TabIndex = 7;
+            this.btnImagenAnterior.Text = "Anterior";
+            this.btnImagenAnterior.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
             // 
-            // button2
+            // btnImagenSiguiente
             // 
-            this.button2.Location = new System.Drawing.Point(984, 429);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 32);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(984, 429);
+            this.btnImagenSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImagenSiguiente.Name = "btnImagenSiguiente";
+            this.btnImagenSiguiente.Size = new System.Drawing.Size(65, 32);
+            this.btnImagenSiguiente.TabIndex = 8;
+            this.btnImagenSiguiente.Text = "Siguiente";
+            this.btnImagenSiguiente.UseVisualStyleBackColor = true;
+            this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click);
+            // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataSource = typeof(Trabajo_Practico_N2.Articulo);
             // 
             // listadearticulos
             // 
@@ -145,8 +146,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1239, 517);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImagenSiguiente);
+            this.Controls.Add(this.btnImagenAnterior);
             this.Controls.Add(this.btnagregarimagen);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btneliminar);
@@ -172,7 +173,7 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnagregarimagen;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnImagenAnterior;
+        private System.Windows.Forms.Button btnImagenSiguiente;
     }
 }
