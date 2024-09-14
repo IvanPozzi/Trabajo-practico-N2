@@ -165,6 +165,7 @@
             this.txtbuscador.Name = "txtbuscador";
             this.txtbuscador.Size = new System.Drawing.Size(373, 26);
             this.txtbuscador.TabIndex = 10;
+            this.txtbuscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscador_KeyPress);
             // 
             // btnbuscar
             // 

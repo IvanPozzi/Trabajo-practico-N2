@@ -148,15 +148,27 @@ namespace Trabajo_Practico_N2
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+     
+        }
+        public void ocultarcolumnas()
+        {
+            dgvarticulos.Columns["Marca"].Visible = false;
+            dgvarticulos.Columns["Categoria"].Visible = false;
+            
+        }
+
+        private void txtbuscador_KeyPress(object sender, KeyPressEventArgs e)
+        {
             List<Articulo> filtrada;
             string filtro = txtbuscador.Text;
 
             if (filtro != "")
             {
-                filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper())||x.descripcionMarca.ToUpper().Contains(filtro.ToUpper()));
-                
+                filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.descripcionMarca.ToUpper().Contains(filtro.ToUpper()));
+
             }
-            else {
+            else
+            {
 
                 filtrada = listaarticu;
 
@@ -164,12 +176,6 @@ namespace Trabajo_Practico_N2
             dgvarticulos.DataSource = null;
             dgvarticulos.DataSource = filtrada;
             ocultarcolumnas();
-        }
-        public void ocultarcolumnas()
-        {
-            dgvarticulos.Columns["Marca"].Visible = false;
-            dgvarticulos.Columns["Categoria"].Visible = false;
-            
         }
     }
 }
