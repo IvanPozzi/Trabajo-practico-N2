@@ -28,53 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMarcaSubMenu = new System.Windows.Forms.Button();
-            this.btnCategoriaSubMenu = new System.Windows.Forms.Button();
-            this.lblCartelCriterioBusqueda = new System.Windows.Forms.Label();
+            this.btnBuscarMarca = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnBuscarCategoria = new System.Windows.Forms.Button();
+            this.btnBuscarCodigo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnMarcaSubMenu
+            // btnBuscarMarca
             // 
-            this.btnMarcaSubMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcaSubMenu.Location = new System.Drawing.Point(274, 128);
-            this.btnMarcaSubMenu.Name = "btnMarcaSubMenu";
-            this.btnMarcaSubMenu.Size = new System.Drawing.Size(212, 85);
-            this.btnMarcaSubMenu.TabIndex = 0;
-            this.btnMarcaSubMenu.Text = "Marca";
-            this.btnMarcaSubMenu.UseVisualStyleBackColor = true;
-            this.btnMarcaSubMenu.Click += new System.EventHandler(this.btnMarcaSubMenu_Click);
+            this.btnBuscarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarMarca.Location = new System.Drawing.Point(47, 102);
+            this.btnBuscarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarMarca.Name = "btnBuscarMarca";
+            this.btnBuscarMarca.Size = new System.Drawing.Size(159, 69);
+            this.btnBuscarMarca.TabIndex = 0;
+            this.btnBuscarMarca.Text = "Buscar por marca";
+            this.btnBuscarMarca.UseVisualStyleBackColor = true;
+            this.btnBuscarMarca.Click += new System.EventHandler(this.btnMarcaSubMenu_Click);
             // 
-            // btnCategoriaSubMenu
+            // lblTitulo
             // 
-            this.btnCategoriaSubMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoriaSubMenu.Location = new System.Drawing.Point(274, 260);
-            this.btnCategoriaSubMenu.Name = "btnCategoriaSubMenu";
-            this.btnCategoriaSubMenu.Size = new System.Drawing.Size(212, 91);
-            this.btnCategoriaSubMenu.TabIndex = 1;
-            this.btnCategoriaSubMenu.Text = "Categoria";
-            this.btnCategoriaSubMenu.UseVisualStyleBackColor = true;
-            this.btnCategoriaSubMenu.Click += new System.EventHandler(this.btnCategoriaSubMenu_Click);
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblTitulo.Location = new System.Drawing.Point(202, 28);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(197, 31);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Buscar Articulo";
             // 
-            // lblCartelCriterioBusqueda
+            // btnBuscarCategoria
             // 
-            this.lblCartelCriterioBusqueda.AutoSize = true;
-            this.lblCartelCriterioBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCartelCriterioBusqueda.Location = new System.Drawing.Point(205, 45);
-            this.lblCartelCriterioBusqueda.Name = "lblCartelCriterioBusqueda";
-            this.lblCartelCriterioBusqueda.Size = new System.Drawing.Size(393, 25);
-            this.lblCartelCriterioBusqueda.TabIndex = 2;
-            this.lblCartelCriterioBusqueda.Text = "¿Por cual criterio desea hacer la búsqueda?";
+            this.btnBuscarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(47, 213);
+            this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCategoria.Name = "btnBuscarCategoria";
+            this.btnBuscarCategoria.Size = new System.Drawing.Size(159, 69);
+            this.btnBuscarCategoria.TabIndex = 3;
+            this.btnBuscarCategoria.Text = "Buscar por categoria";
+            this.btnBuscarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCodigo
+            // 
+            this.btnBuscarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCodigo.Location = new System.Drawing.Point(343, 102);
+            this.btnBuscarCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCodigo.Name = "btnBuscarCodigo";
+            this.btnBuscarCodigo.Size = new System.Drawing.Size(159, 69);
+            this.btnBuscarCodigo.TabIndex = 4;
+            this.btnBuscarCodigo.Text = "Buscar por codigo";
+            this.btnBuscarCodigo.UseVisualStyleBackColor = true;
             // 
             // frmVentanaBusqueda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblCartelCriterioBusqueda);
-            this.Controls.Add(this.btnCategoriaSubMenu);
-            this.Controls.Add(this.btnMarcaSubMenu);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnBuscarCodigo);
+            this.Controls.Add(this.btnBuscarCategoria);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.btnBuscarMarca);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmVentanaBusqueda";
-            this.Text = "frmVentanaBusqueda";
+            this.Text = "Buscar Articulo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,8 +98,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMarcaSubMenu;
-        private System.Windows.Forms.Button btnCategoriaSubMenu;
-        private System.Windows.Forms.Label lblCartelCriterioBusqueda;
+        private System.Windows.Forms.Button btnBuscarMarca;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnBuscarCategoria;
+        private System.Windows.Forms.Button btnBuscarCodigo;
     }
 }

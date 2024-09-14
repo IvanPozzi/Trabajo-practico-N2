@@ -12,15 +12,15 @@ namespace Trabajo_Practico_N2
     public class Articulo
     {
         public int Id { get; set; }
-        public string codigo_de_articulo { get; set; }
+        public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public int Marca { get; set; }
-        public string descripcionMarca { get; set; }
-        public int Categoria { get; set; }
-        public string descripcionCategoria { get; set; }
+        public int IdMarca { get; set; }
+        public string Marca { get; set; }
+        public int IdCategoria { get; set; }
+        public string Categoria { get; set; }
         public float Precio { get; set; }
-        public Imagen imagen { get; set; }
+        public List<Imagen> Imagen { get; set; }
      
 
         

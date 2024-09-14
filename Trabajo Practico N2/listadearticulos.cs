@@ -30,10 +30,15 @@ namespace Trabajo_Practico_N2
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
+            dgvarticulos.Columns["Id"].Visible = false;
+            dgvarticulos.Columns["IdCategoria"].Visible = false;
+            dgvarticulos.Columns["IdMarca"].Visible = false;
+            
+
 
             try
             {
-                ptbimagen.Load(listaarticu[0].imagen.url);
+                ptbimagen.Load(listaarticu[0].Imagen[0].url);
             }
             catch (Exception ex)
             {
@@ -50,12 +55,12 @@ namespace Trabajo_Practico_N2
             Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
             try
             {
-               
-                ptbimagen.Load(seleccionado.imagen.url);
+
+                ptbimagen.Load(seleccionado.Imagen[0].url);
             }
             catch (Exception ex)
             {
-                ptbimagen.Load(seleccionado.imagen.imgNoEncontrada()); ;
+                ptbimagen.Load(seleccionado.Imagen[0].imgNoEncontrada()); ;
 
             }
 
@@ -68,7 +73,7 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                ptbimagen.Load(listaarticu[0].imagen.url);
+                ptbimagen.Load(listaarticu[0].Imagen[0].url);
             }
             catch (Exception ex)
             {
@@ -77,11 +82,6 @@ namespace Trabajo_Practico_N2
             }
 
 
-
-        }
-
-        private void listadearticulos_Load(object sender, EventArgs e)
-        {
 
         }
 

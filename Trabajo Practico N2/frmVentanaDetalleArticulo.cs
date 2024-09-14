@@ -30,21 +30,21 @@ namespace Trabajo_Practico_N2
         {
             if(articulo.Id != null)
             {
-                lblCodigoArticulo.Text = articulo.codigo_de_articulo;
+                lblCodigoArticulo.Text = articulo.Codigo;
                 lblNombreArticulo.Text = articulo.Nombre;
-                lblMarcaArticulo.Text = articulo.descripcionMarca;
-                lblCategoriaArticulo.Text = articulo.descripcionCategoria;
+                lblMarcaArticulo.Text = articulo.Marca;
+                lblCategoriaArticulo.Text = articulo.Categoria;
                 lblPrecioArticulo.Text = articulo.Precio.ToString();
                 lblDescripcionArticulo.Text = articulo.Descripcion;
 
                 try
                 {
-                    ptbImagenDetalle.Load(articulo.imagen.url);
+                    ptbImagenDetalle.Load(articulo.Imagen[0].url);
                 }
                 catch (Exception)
                 {
 
-                    ptbImagenDetalle.Load(articulo.imagen.imgNoEncontrada());
+                    ptbImagenDetalle.Load(articulo.Imagen[0].imgNoEncontrada());
                 }
                 
             }
