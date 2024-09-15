@@ -30,7 +30,6 @@ namespace Trabajo_Practico_N2
 
         private void dgvArticulos_load(object sender,EventArgs e)
         {
-            ItemImagen = 0;
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
@@ -42,8 +41,8 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                ptbimagen.Load(listaarticu[0].Imagen[ItemImagen].url);
                 limitarCarrousel(listaarticu[0].Imagen);
+                ptbimagen.Load(listaarticu[0].Imagen[ItemImagen].url);
             }
             catch (Exception ex)
             {
@@ -61,8 +60,8 @@ namespace Trabajo_Practico_N2
             
             try
             {
-                ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
                 limitarCarrousel(seleccionado.Imagen);
+                ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
             }
             catch (Exception ex)
             {
@@ -174,7 +173,18 @@ namespace Trabajo_Practico_N2
 
         private void limitarCarrousel(List<Imagen> listaImagenes)
         {
+            ItemImagen = 0;
             limiteItem = listaImagenes.Count()-1;
+            btnImagenAnterior.Visible=false;
+
+            if(limiteItem == 0)
+            {
+                btnImagenSiguiente.Visible=false;
+            }
+            else
+            {
+                btnImagenSiguiente.Visible = true;
+            }
         }
 
         private void btnImagenAnterior_Click(object sender, EventArgs e)
@@ -197,7 +207,7 @@ namespace Trabajo_Practico_N2
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                ptbimagen.Load(seleccionado.Imagen[0].imgNoEncontrada());
             }
 
         }
