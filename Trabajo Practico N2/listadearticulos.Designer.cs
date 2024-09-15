@@ -53,7 +53,12 @@
             // 
             this.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvarticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+<<<<<<< HEAD
             this.dgvarticulos.Location = new System.Drawing.Point(23, 34);
+=======
+            this.dgvarticulos.Location = new System.Drawing.Point(36, 22);
+            this.dgvarticulos.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.dgvarticulos.MultiSelect = false;
             this.dgvarticulos.Name = "dgvarticulos";
             this.dgvarticulos.RowHeadersWidth = 62;
@@ -65,9 +70,16 @@
             // 
             // ptbimagen
             // 
+<<<<<<< HEAD
             this.ptbimagen.Location = new System.Drawing.Point(889, 34);
             this.ptbimagen.Name = "ptbimagen";
             this.ptbimagen.Size = new System.Drawing.Size(464, 427);
+=======
+            this.ptbimagen.Location = new System.Drawing.Point(935, 22);
+            this.ptbimagen.Margin = new System.Windows.Forms.Padding(2);
+            this.ptbimagen.Name = "ptbimagen";
+            this.ptbimagen.Size = new System.Drawing.Size(398, 357);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.ptbimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbimagen.TabIndex = 1;
             this.ptbimagen.TabStop = false;
@@ -75,14 +87,19 @@
             // 
             // btnVerDetalles
             // 
+<<<<<<< HEAD
             this.btnVerDetalles.BackColor = System.Drawing.Color.Transparent;
             this.btnVerDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerDetalles.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalles.ForeColor = System.Drawing.Color.Orange;
             this.btnVerDetalles.Location = new System.Drawing.Point(23, 532);
             this.btnVerDetalles.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+=======
+            this.btnVerDetalles.Location = new System.Drawing.Point(37, 464);
+            this.btnVerDetalles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnVerDetalles.Name = "btnVerDetalles";
-            this.btnVerDetalles.Size = new System.Drawing.Size(219, 55);
+            this.btnVerDetalles.Size = new System.Drawing.Size(146, 36);
             this.btnVerDetalles.TabIndex = 3;
             this.btnVerDetalles.Text = "Detalles";
             this.btnVerDetalles.UseVisualStyleBackColor = false;
@@ -90,13 +107,18 @@
             // 
             // btneliminar
             // 
+<<<<<<< HEAD
             this.btneliminar.BackColor = System.Drawing.Color.Transparent;
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.Orange;
             this.btneliminar.Location = new System.Drawing.Point(337, 536);
+=======
+            this.btneliminar.Location = new System.Drawing.Point(233, 467);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(216, 51);
+            this.btneliminar.Size = new System.Drawing.Size(144, 33);
             this.btneliminar.TabIndex = 4;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
@@ -104,6 +126,7 @@
             // 
             // btnmodificar
             // 
+<<<<<<< HEAD
             this.btnmodificar.BackColor = System.Drawing.Color.Transparent;
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,6 +134,12 @@
             this.btnmodificar.Location = new System.Drawing.Point(654, 536);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(214, 51);
+=======
+            this.btnmodificar.Location = new System.Drawing.Point(415, 466);
+            this.btnmodificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(143, 33);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnmodificar.TabIndex = 5;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
@@ -118,6 +147,7 @@
             // 
             // btnagregarimagen
             // 
+<<<<<<< HEAD
             this.btnagregarimagen.BackColor = System.Drawing.Color.Transparent;
             this.btnagregarimagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregarimagen.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,6 +155,12 @@
             this.btnagregarimagen.Location = new System.Drawing.Point(1023, 536);
             this.btnagregarimagen.Name = "btnagregarimagen";
             this.btnagregarimagen.Size = new System.Drawing.Size(214, 52);
+=======
+            this.btnagregarimagen.Location = new System.Drawing.Point(1050, 465);
+            this.btnagregarimagen.Margin = new System.Windows.Forms.Padding(2);
+            this.btnagregarimagen.Name = "btnagregarimagen";
+            this.btnagregarimagen.Size = new System.Drawing.Size(143, 34);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnagregarimagen.TabIndex = 6;
             this.btnagregarimagen.Text = "Agregar imagan";
             this.btnagregarimagen.UseVisualStyleBackColor = false;
@@ -132,6 +168,7 @@
             // 
             // btnImagenAnterior
             // 
+<<<<<<< HEAD
             this.btnImagenAnterior.BackColor = System.Drawing.Color.Transparent;
             this.btnImagenAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImagenAnterior.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,10 +179,20 @@
             this.btnImagenAnterior.TabIndex = 7;
             this.btnImagenAnterior.Text = "Anterior";
             this.btnImagenAnterior.UseVisualStyleBackColor = false;
+=======
+            this.btnImagenAnterior.Location = new System.Drawing.Point(1039, 430);
+            this.btnImagenAnterior.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImagenAnterior.Name = "btnImagenAnterior";
+            this.btnImagenAnterior.Size = new System.Drawing.Size(68, 32);
+            this.btnImagenAnterior.TabIndex = 7;
+            this.btnImagenAnterior.Text = "Anterior";
+            this.btnImagenAnterior.UseVisualStyleBackColor = true;
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click_1);
             // 
             // btnImagenSiguiente
             // 
+<<<<<<< HEAD
             this.btnImagenSiguiente.BackColor = System.Drawing.Color.Transparent;
             this.btnImagenSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImagenSiguiente.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,27 +203,47 @@
             this.btnImagenSiguiente.TabIndex = 8;
             this.btnImagenSiguiente.Text = "Siguiente";
             this.btnImagenSiguiente.UseVisualStyleBackColor = false;
+=======
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(1136, 429);
+            this.btnImagenSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImagenSiguiente.Name = "btnImagenSiguiente";
+            this.btnImagenSiguiente.Size = new System.Drawing.Size(65, 32);
+            this.btnImagenSiguiente.TabIndex = 8;
+            this.btnImagenSiguiente.Text = "Siguiente";
+            this.btnImagenSiguiente.UseVisualStyleBackColor = true;
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click_1);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 35);
+=======
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.button1.TabIndex = 13;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 35);
+=======
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.button2.TabIndex = 12;
             // 
             // lblfiltro
             // 
             this.lblfiltro.AutoSize = true;
+<<<<<<< HEAD
             this.lblfiltro.BackColor = System.Drawing.Color.Transparent;
             this.lblfiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblfiltro.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,31 +252,51 @@
             this.lblfiltro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfiltro.Name = "lblfiltro";
             this.lblfiltro.Size = new System.Drawing.Size(116, 44);
+=======
+            this.lblfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfiltro.Location = new System.Drawing.Point(33, 426);
+            this.lblfiltro.Name = "lblfiltro";
+            this.lblfiltro.Size = new System.Drawing.Size(61, 24);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.lblfiltro.TabIndex = 9;
             this.lblfiltro.Text = "Filtro :";
             // 
             // txtbuscador
             // 
+<<<<<<< HEAD
             this.txtbuscador.Location = new System.Drawing.Point(164, 490);
             this.txtbuscador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbuscador.Name = "txtbuscador";
             this.txtbuscador.Size = new System.Drawing.Size(416, 26);
+=======
+            this.txtbuscador.Location = new System.Drawing.Point(100, 426);
+            this.txtbuscador.Name = "txtbuscador";
+            this.txtbuscador.Size = new System.Drawing.Size(373, 20);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.txtbuscador.TabIndex = 10;
             this.txtbuscador.TextChanged += new System.EventHandler(this.txtbuscador_TextChanged);
             // 
             // btnbuscar
             // 
+<<<<<<< HEAD
             this.btnbuscar.BackColor = System.Drawing.Color.Transparent;
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.ForeColor = System.Drawing.Color.Orange;
             this.btnbuscar.Location = new System.Drawing.Point(654, 469);
             this.btnbuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+            this.btnbuscar.Location = new System.Drawing.Point(604, 408);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(220, 57);
             this.btnbuscar.TabIndex = 11;
             this.btnbuscar.Text = "Buscar";
+<<<<<<< HEAD
             this.btnbuscar.UseVisualStyleBackColor = false;
+=======
+            this.btnbuscar.UseVisualStyleBackColor = true;
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             // 
             // articuloBindingSource
             // 
@@ -217,10 +304,14 @@
             // 
             // listadearticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1374, 614);
+=======
+            this.ClientSize = new System.Drawing.Size(1400, 522);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtbuscador);
             this.Controls.Add(this.lblfiltro);
@@ -234,7 +325,11 @@
             this.Controls.Add(this.btnVerDetalles);
             this.Controls.Add(this.ptbimagen);
             this.Controls.Add(this.dgvarticulos);
+<<<<<<< HEAD
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> b1c4c73194e4799cf62f671f5a9b03353c8330b2
             this.Name = "listadearticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listadearticulos";
