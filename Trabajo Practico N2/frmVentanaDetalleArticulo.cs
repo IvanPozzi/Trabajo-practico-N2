@@ -30,6 +30,7 @@ namespace Trabajo_Practico_N2
         {
             if(articulo.Id != null)
             {
+                Imagen imagenDefecto = new Imagen();
                 lblCodigoArticulo.Text = articulo.Codigo;
                 lblNombreArticulo.Text = articulo.Nombre;
                 lblMarcaArticulo.Text = articulo.Marca;
@@ -39,12 +40,20 @@ namespace Trabajo_Practico_N2
 
                 try
                 {
-                    ptbImagenDetalle.Load(articulo.Imagen[0].url);
+                    if(articulo.Imagen.Count != 0)
+                    {
+                        ptbImagenDetalle.Load(articulo.Imagen[0].url);
+                    }
+                    else
+                    {
+                        ptbImagenDetalle.Load(imagenDefecto.imgNoEncontrada());
+                    }
+                    
                 }
                 catch (Exception)
                 {
 
-                    ptbImagenDetalle.Load(articulo.Imagen[0].imgNoEncontrada());
+                    ptbImagenDetalle.Load(imagenDefecto.imgNoEncontrada());
                 }
                 
             }

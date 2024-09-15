@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Trabajo_Practico_N2
 {
     public class Articulonegocio
@@ -229,7 +230,8 @@ namespace Trabajo_Practico_N2
                 datos.setearParametro("@Codigo", nuevo.Codigo);
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
-                datos.setearParametro("@IdMarca", nuevo.IdCategoria);
+                datos.setearParametro("@IdCategoria", nuevo.IdCategoria);
+                datos.setearParametro("@IdMarca", nuevo.IdMarca);
                 datos.setearParametro("@Precio", nuevo.Precio);
                 datos.ejecutarAccion();
             }
