@@ -40,6 +40,41 @@ namespace Trabajo_Practico_N2
             }
         }
 
+        public List<Imagen> listarPorIdArticulo(int IdArticulo)
+        {
+            List<Imagen> lista = new List<Imagen>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Select Id, IdArticulo, ImagenUrl from Imagenes where IdArticulo = @IdArticulo");
+                datos.setearParametro("@IdArticulo", IdArticulo);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Imagen aux = new Imagen();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Articulo = (int)datos.Lector["IdArticulo"];
+                    aux.url = !datos.Lector.IsDBNull(datos.Lector.GetOrdinal("ImagenUrl")) ? (string)datos.Lector["ImagenUrl"] : "";
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            
+        }
+
         public void agregar(Imagen nueva)
         {
             AccesoDatos datos = new AccesoDatos();

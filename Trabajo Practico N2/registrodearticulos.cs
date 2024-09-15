@@ -39,14 +39,14 @@ namespace Trabajo_Practico_N2
                     Articulo aux = new Articulo();
 
                     aux.Id = lector.GetInt32(0);
-                    aux.codigo_de_articulo = lector.GetString(1);
+                    aux.Codigo = lector.GetString(1);
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Marca = (int)lector["IdMarca"];
-                    aux.Categoria = (int)lector["IdCategoria"];
+                    aux.IdMarca = (int)lector["IdMarca"];
+                    aux.IdCategoria = (int)lector["IdCategoria"];
                     aux.Precio = (float)(decimal)lector["Precio"];
-                    aux.imagen = new Imagen();
-                    aux.imagen.url = (string)lector["ImagenUrl"];//lector.GetString(imagenUrlIndex);
+                    //aux.Imagen[0] = new Imagen();
+                    //aux.imagen.url = (string)lector["ImagenUrl"];//lector.GetString(imagenUrlIndex);
                     //aux.imagen.url = lector.GetString(7);
 
                     //aux.imagen.url = (string)lector.GetString(2);

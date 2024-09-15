@@ -31,7 +31,7 @@ namespace Trabajo_Practico_N2
             {
                 lblid.Text = articulo.Id.ToString();
 
-                lblcodigoactual.Text = articulo.codigo_de_articulo;
+                lblcodigoactual.Text = articulo.Codigo;
                 lblnombre.Text = articulo.Nombre;
             }
         }

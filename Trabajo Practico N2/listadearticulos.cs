@@ -14,6 +14,9 @@ namespace Trabajo_Practico_N2
     public partial class listadearticulos : Form
     {   
         private List<Articulo> listaarticu;
+        private Articulo seleccionado;
+        private int ItemImagen = 0;
+        private int limiteItem;
         public listadearticulos()
         {
             InitializeComponent();
@@ -26,14 +29,18 @@ namespace Trabajo_Practico_N2
         }
 
         private void dgvArticulos_load(object sender,EventArgs e)
-        {   
+        {
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar(); 
             dgvarticulos.DataSource = listaarticu;
+            ocultarcolumnas();
+            
+
 
             try
             {
-                ptbimagen.Load(listaarticu[0].imagen.url);
+                limitarCarrousel(listaarticu[0].Imagen);
+                ptbimagen.Load(listaarticu[0].Imagen[ItemImagen].url);
             }
             catch (Exception ex)
             {
@@ -47,21 +54,23 @@ namespace Trabajo_Practico_N2
 
         private void dgvarticulos_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvarticulos.CurrentRow != null)
+
+            try
             {
-               
-               
-                Articulo seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
-                try
+                if (dgvarticulos.CurrentRow != null)
                 {
-
-                    ptbimagen.Load(seleccionado.imagen.url);
+                    seleccionado = (Articulo)dgvarticulos.CurrentRow.DataBoundItem;
+                    limitarCarrousel(seleccionado.Imagen);
+                    ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
                 }
-                catch (Exception ex)
-                {
-                    ptbimagen.Load(seleccionado.imagen.imgNoEncontrada()); ;
+               
+            }
+            catch (Exception ex)
+            {
+                Imagen imagenPorDefecto = new Imagen();
+                ptbimagen.Load(imagenPorDefecto.imgNoEncontrada());
 
-                }
+               
             }
 
         }
@@ -70,10 +79,13 @@ namespace Trabajo_Practico_N2
             Articulonegocio registrodearticulos = new Articulonegocio();
             listaarticu = registrodearticulos.listar();
             dgvarticulos.DataSource = listaarticu;
+            btnImagenAnterior.Visible = false;
 
             try
             {
-                ptbimagen.Load(listaarticu[0].imagen.url);
+                ptbimagen.Load(listaarticu[0].Imagen[0].url);
+                limitarCarrousel(listaarticu[0].Imagen);
+                ItemImagen = 0;
             }
             catch (Exception ex)
             {
@@ -82,11 +94,6 @@ namespace Trabajo_Practico_N2
             }
 
 
-
-        }
-
-        private void listadearticulos_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -120,10 +127,6 @@ namespace Trabajo_Practico_N2
             }
         }
 
-        private void dgvarticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private Articulo articuloActual = null;
         private void btnmodificar_Click(object sender, EventArgs e)
         {
@@ -146,25 +149,98 @@ namespace Trabajo_Practico_N2
             //nuevaimagen.agregarotra();
         }
 
+
+        private void limitarCarrousel(List<Imagen> listaImagenes)
+        {
+            ItemImagen = 0;
+            limiteItem = listaImagenes.Count()-1;
+            btnImagenAnterior.Visible=false;
+
+            if(limiteItem == 0)
+            {
+                btnImagenSiguiente.Visible=false;
+            }
+            else
+            {
+                btnImagenSiguiente.Visible = true;
+            }
+        }
+
+
         private void btnbuscar_Click(object sender, EventArgs e)
         {
      
         }
         public void ocultarcolumnas()
         {
-            dgvarticulos.Columns["Marca"].Visible = false;
-            dgvarticulos.Columns["Categoria"].Visible = false;
-            
+            dgvarticulos.Columns["Id"].Visible = false;
+            dgvarticulos.Columns["IdCategoria"].Visible = false;
+            dgvarticulos.Columns["IdMarca"].Visible = false;
+
         }
 
-        private void txtbuscador_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void btnImagenSiguiente_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ItemImagen < limiteItem)
+                {
+                    ItemImagen++;
+                    ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
+                    btnImagenAnterior.Visible = true;
+
+                    if (ItemImagen == limiteItem)
+                    {
+                        btnImagenSiguiente.Visible = false;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ptbimagen.Load(seleccionado.Imagen[ItemImagen].imgNoEncontrada());
+                if (ItemImagen == limiteItem)
+                {
+                    btnImagenSiguiente.Visible = false;
+                }
+            }
+        }
+
+        private void btnImagenAnterior_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ItemImagen > 0)
+                {
+                    ItemImagen--;
+                    ptbimagen.Load(seleccionado.Imagen[ItemImagen].url);
+                    btnImagenSiguiente.Visible = true;
+
+                    if (ItemImagen == 0)
+                    {
+                        btnImagenAnterior.Visible = false;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ptbimagen.Load(seleccionado.Imagen[0].imgNoEncontrada());
+            }
+        }
+
+
+        private void txtbuscador_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> filtrada;
             string filtro = txtbuscador.Text;
 
-            if (filtro.Length>=2)
+            if (filtro.Length >= 2)
             {
-                filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.descripcionMarca.ToUpper().Contains(filtro.ToUpper()));
+                filtrada = listaarticu.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.ToUpper().Contains(filtro.ToUpper()));
 
             }
             else
@@ -178,4 +254,5 @@ namespace Trabajo_Practico_N2
             ocultarcolumnas();
         }
     }
+
 }

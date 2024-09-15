@@ -36,7 +36,7 @@ namespace Trabajo_Practico_N2
 
 
 
-        /*private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             if(this.articulo == null)
             {
@@ -52,17 +52,16 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                articulo.codigo_de_articulo = txtcadigo.Text;
+                articulo.Codigo = txtcadigo.Text;
                 articulo.Nombre = txtnombre.Text;   
                 articulo.Descripcion = txtdescripcion.Text;
 
-                articulo.Categoria = (int)cmbcategoria.SelectedValue;
-                articulo.Marca = (int)cmbmarca.SelectedValue;
+                articulo.IdCategoria = (int)cmbcategoria.SelectedValue;
+                articulo.IdMarca = (int)cmbmarca.SelectedValue;
                 articulo.Precio = float.Parse(txtprecio.Text);
 
 
                 imagen.url=txturl.Text;
-                imagen.Id = articulo.imagen.Id;
 
                 //articulo.imagen.url=txturl.Text; 
                 
@@ -72,7 +71,7 @@ namespace Trabajo_Practico_N2
                     negocio.agregar(articulo);
                     if(imagen.ToString() != "")
                     {
-                        imagen.Articulo =  (int)negocio.buscarPorCodigo(articulo.codigo_de_articulo); //se busca el id del articulo para 
+                        imagen.Articulo =  (int)negocio.buscarPorIdPorCodigo(articulo.Codigo); //se busca el id del articulo para 
                         nuevaimagen.agregar(imagen);
                     }
                 }
@@ -80,7 +79,8 @@ namespace Trabajo_Practico_N2
                 {
                     if(imagen.url != "" && imagen.ToString() != null)
                     {
-                        if(imagen.Id == 0)
+                        imagen.Id = articulo.Imagen[0].Id;
+                        if (imagen.Id == 0)
                         {
                             imagen.Articulo = articulo.Id;
                             nuevaimagen.agregar(imagen);
@@ -118,15 +118,15 @@ namespace Trabajo_Practico_N2
             {
                 try
                 {
-                    txtcadigo.Text = articulo.codigo_de_articulo;
+                    txtcadigo.Text = articulo.Codigo;
                     txtnombre.Text = articulo.Nombre;
                     txtdescripcion.Text = articulo.Descripcion;
 
-                    cmbcategoria.SelectedValue = articulo.Categoria;
-                    cmbmarca.SelectedValue = articulo.Marca;
+                    cmbcategoria.SelectedValue = articulo.IdCategoria;
+                    cmbmarca.SelectedValue = articulo.IdMarca;
                     
                     txtprecio.Text = articulo.Precio.ToString();
-                    txturl.Text = articulo.imagen.url;
+                    txturl.Text = articulo.Imagen[0].url;
 
                 }
                 catch (Exception ex)
@@ -138,7 +138,8 @@ namespace Trabajo_Practico_N2
 
             
 
-        }*/
+        }
+        /*
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (this.articulo == null)
@@ -231,6 +232,7 @@ namespace Trabajo_Practico_N2
                 }
             }
         }
+        */
 
         private void LimpiarCampos()
         {
