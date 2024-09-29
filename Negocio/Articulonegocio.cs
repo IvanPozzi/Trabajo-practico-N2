@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Dominio;
 
 
-namespace Trabajo_Practico_N2
+namespace Negocio
 {
     public class Articulonegocio
     {
@@ -209,8 +209,7 @@ namespace Trabajo_Practico_N2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al listar los artículos: " + ex.Message);
-                throw;
+                throw ex;
             }
             finally
             {

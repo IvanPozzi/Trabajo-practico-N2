@@ -184,7 +184,6 @@
             // 
             // articuloBindingSource
             // 
-            this.articuloBindingSource.DataSource = typeof(Trabajo_Practico_N2.Articulo);
             // 
             // listadearticulos
             // 

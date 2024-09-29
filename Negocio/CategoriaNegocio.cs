@@ -3,31 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
 
-namespace Trabajo_Practico_N2
+namespace Negocio
 {
-    public class MarcaNegocio
+    public class CategoriaNegocio
     {
-        public List<Marca> listar()
+        public List<Categoria> listar()
         {
-            List<Marca> listaMarcas = new List<Marca>();
+            List<Categoria> listaCategorias = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
-                datos.setearConsulta("Select Id, Descripcion From Marcas");
+                datos.setearConsulta("Select Id, Descripcion From Categorias");
                 datos.ejecutarLectura();
 
-                while (datos.Lector.Read())
+                while (datos.Lector.Read()) 
                 {
-                    Marca aux = new Marca();
+                    Categoria aux = new Categoria();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"].ToString();
 
-                    listaMarcas.Add(aux);
+                    listaCategorias.Add(aux);
                 }
                 datos.cerrarConexion();
-                return listaMarcas;
+                return listaCategorias;
 
             }
             catch (Exception ex)
@@ -35,19 +37,18 @@ namespace Trabajo_Practico_N2
 
                 throw ex;
             }
-            finally
-            {
+            finally {
                 datos.cerrarConexion();
             }
         }
 
-        public void agregar(Marca nueva)
+        public void agregar(Categoria nueva)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("Insert Into Marcas(Descripcion) values('" + nueva.Descripcion + "')");
+                datos.setearConsulta("Insert Into Categorias(Descripcion) values('" + nueva.Descripcion +"')");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -62,15 +63,15 @@ namespace Trabajo_Practico_N2
 
         }
 
-        public void modificar(Marca marca)
+        public void modificar(Categoria categoria)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("update Marcas set Descripcion = @Descripcion where id = @Id");
-                datos.setearParametro("@Descripcion", marca.Descripcion);
-                datos.setearParametro("@Id", marca.Id);
+                datos.setearConsulta("update Categorias set Descripcion = @Descripcion where id = @Id");
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
+                datos.setearParametro("@Id", categoria.Id);
 
                 datos.ejecutarAccion();
             }
@@ -79,8 +80,7 @@ namespace Trabajo_Practico_N2
 
                 throw ex;
             }
-            finally
-            {
+            finally {
                 datos.cerrarConexion();
             }
         }
@@ -91,7 +91,7 @@ namespace Trabajo_Practico_N2
 
             try
             {
-                datos.setearConsulta("delete from Marcas where Id = @Id");
+                datos.setearConsulta("delete from Categorias where Id = @Id");
                 datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
 

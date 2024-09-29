@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using Dominio;
+using Negocio;
 
 
 namespace Trabajo_Practico_N2

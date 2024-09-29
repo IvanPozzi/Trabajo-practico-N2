@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabajo_Practico_N2
+namespace Dominio
 {
     public class Marca
     {

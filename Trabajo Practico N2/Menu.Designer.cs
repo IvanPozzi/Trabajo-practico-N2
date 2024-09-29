@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.txtmenu = new System.Windows.Forms.Label();
             this.btnlistar = new System.Windows.Forms.Button();
-            this.btnbuscararticulo = new System.Windows.Forms.Button();
             this.btnagregararticulo = new System.Windows.Forms.Button();
-            this.btnmodificararticulo = new System.Windows.Forms.Button();
             this.btneliminararticulo = new System.Windows.Forms.Button();
-            this.btnverdetalle = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.btnMarca = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,7 +56,7 @@
             this.btnlistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlistar.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlistar.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnlistar.Location = new System.Drawing.Point(62, 56);
+            this.btnlistar.Location = new System.Drawing.Point(177, 72);
             this.btnlistar.Margin = new System.Windows.Forms.Padding(2);
             this.btnlistar.Name = "btnlistar";
             this.btnlistar.Size = new System.Drawing.Size(184, 53);
@@ -68,27 +65,13 @@
             this.btnlistar.UseVisualStyleBackColor = false;
             this.btnlistar.Click += new System.EventHandler(this.btnlistar_Click);
             // 
-            // btnbuscararticulo
-            // 
-            this.btnbuscararticulo.BackColor = System.Drawing.Color.Transparent;
-            this.btnbuscararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnbuscararticulo.Location = new System.Drawing.Point(279, 54);
-            this.btnbuscararticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnbuscararticulo.Name = "btnbuscararticulo";
-            this.btnbuscararticulo.Size = new System.Drawing.Size(184, 53);
-            this.btnbuscararticulo.TabIndex = 2;
-            this.btnbuscararticulo.Text = "BUSCAR ARTICULO";
-            this.btnbuscararticulo.UseVisualStyleBackColor = false;
-            // 
             // btnagregararticulo
             // 
             this.btnagregararticulo.BackColor = System.Drawing.Color.Transparent;
             this.btnagregararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnagregararticulo.Location = new System.Drawing.Point(62, 112);
+            this.btnagregararticulo.Location = new System.Drawing.Point(177, 128);
             this.btnagregararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregararticulo.Name = "btnagregararticulo";
             this.btnagregararticulo.Size = new System.Drawing.Size(184, 53);
@@ -97,27 +80,13 @@
             this.btnagregararticulo.UseVisualStyleBackColor = false;
             this.btnagregararticulo.Click += new System.EventHandler(this.btnagregararticulo_Click);
             // 
-            // btnmodificararticulo
-            // 
-            this.btnmodificararticulo.BackColor = System.Drawing.Color.Transparent;
-            this.btnmodificararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodificararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnmodificararticulo.Location = new System.Drawing.Point(279, 112);
-            this.btnmodificararticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnmodificararticulo.Name = "btnmodificararticulo";
-            this.btnmodificararticulo.Size = new System.Drawing.Size(184, 53);
-            this.btnmodificararticulo.TabIndex = 4;
-            this.btnmodificararticulo.Text = "MODIFICAR ARTICULO";
-            this.btnmodificararticulo.UseVisualStyleBackColor = false;
-            // 
             // btneliminararticulo
             // 
             this.btneliminararticulo.BackColor = System.Drawing.Color.Transparent;
             this.btneliminararticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminararticulo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminararticulo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btneliminararticulo.Location = new System.Drawing.Point(62, 169);
+            this.btneliminararticulo.Location = new System.Drawing.Point(177, 185);
             this.btneliminararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminararticulo.Name = "btneliminararticulo";
             this.btneliminararticulo.Size = new System.Drawing.Size(184, 53);
@@ -125,28 +94,14 @@
             this.btneliminararticulo.Text = "ELIMINAR ARTICULO";
             this.btneliminararticulo.UseVisualStyleBackColor = false;
             // 
-            // btnverdetalle
-            // 
-            this.btnverdetalle.BackColor = System.Drawing.Color.Transparent;
-            this.btnverdetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnverdetalle.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnverdetalle.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnverdetalle.Location = new System.Drawing.Point(279, 180);
-            this.btnverdetalle.Margin = new System.Windows.Forms.Padding(2);
-            this.btnverdetalle.Name = "btnverdetalle";
-            this.btnverdetalle.Size = new System.Drawing.Size(184, 53);
-            this.btnverdetalle.TabIndex = 6;
-            this.btnverdetalle.Text = "VER DETALLE";
-            this.btnverdetalle.UseVisualStyleBackColor = false;
-            // 
             // btnCategoria
             // 
             this.btnCategoria.BackColor = System.Drawing.Color.Transparent;
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnCategoria.Location = new System.Drawing.Point(62, 306);
-            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCategoria.Location = new System.Drawing.Point(177, 258);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(184, 53);
             this.btnCategoria.TabIndex = 7;
@@ -160,7 +115,7 @@
             this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarca.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarca.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnMarca.Location = new System.Drawing.Point(279, 306);
+            this.btnMarca.Location = new System.Drawing.Point(177, 329);
             this.btnMarca.Margin = new System.Windows.Forms.Padding(2);
             this.btnMarca.Name = "btnMarca";
             this.btnMarca.Size = new System.Drawing.Size(184, 53);
@@ -177,11 +132,8 @@
             this.ClientSize = new System.Drawing.Size(506, 393);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnCategoria);
-            this.Controls.Add(this.btnverdetalle);
             this.Controls.Add(this.btneliminararticulo);
-            this.Controls.Add(this.btnmodificararticulo);
             this.Controls.Add(this.btnagregararticulo);
-            this.Controls.Add(this.btnbuscararticulo);
             this.Controls.Add(this.btnlistar);
             this.Controls.Add(this.txtmenu);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -197,11 +149,8 @@
 
         private System.Windows.Forms.Label txtmenu;
         private System.Windows.Forms.Button btnlistar;
-        private System.Windows.Forms.Button btnbuscararticulo;
         private System.Windows.Forms.Button btnagregararticulo;
-        private System.Windows.Forms.Button btnmodificararticulo;
         private System.Windows.Forms.Button btneliminararticulo;
-        private System.Windows.Forms.Button btnverdetalle;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Button btnMarca;
     }

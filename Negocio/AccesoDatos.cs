@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace Trabajo_Practico_N2
+namespace Negocio
 {
     public class AccesoDatos
     {

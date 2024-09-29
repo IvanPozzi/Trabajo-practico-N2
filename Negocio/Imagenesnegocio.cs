@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio;
 
-namespace Trabajo_Practico_N2
+namespace Negocio
 {
     public class ImagenesNegocio
     {

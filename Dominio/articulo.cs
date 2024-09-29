@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 
-namespace Trabajo_Practico_N2
+namespace Dominio
 {
 
     public class Articulo
