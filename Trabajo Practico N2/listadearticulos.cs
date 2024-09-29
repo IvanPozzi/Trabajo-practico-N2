@@ -255,6 +255,21 @@ namespace Trabajo_Practico_N2
             dgvarticulos.DataSource = filtrada;
             ocultarcolumnas();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblfiltro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -43,10 +43,9 @@
             this.txtmenu.BackColor = System.Drawing.Color.Transparent;
             this.txtmenu.Font = new System.Drawing.Font("Impact", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmenu.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txtmenu.Location = new System.Drawing.Point(221, 6);
-            this.txtmenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtmenu.Location = new System.Drawing.Point(319, 9);
             this.txtmenu.Name = "txtmenu";
-            this.txtmenu.Size = new System.Drawing.Size(109, 46);
+            this.txtmenu.Size = new System.Drawing.Size(157, 68);
             this.txtmenu.TabIndex = 0;
             this.txtmenu.Text = "MENU";
             // 
@@ -59,7 +58,7 @@
             this.btnlistar.Location = new System.Drawing.Point(177, 72);
             this.btnlistar.Margin = new System.Windows.Forms.Padding(2);
             this.btnlistar.Name = "btnlistar";
-            this.btnlistar.Size = new System.Drawing.Size(184, 53);
+            this.btnlistar.Size = new System.Drawing.Size(276, 82);
             this.btnlistar.TabIndex = 1;
             this.btnlistar.Text = "LISTA DE ARTICULOS";
             this.btnlistar.UseVisualStyleBackColor = false;
@@ -74,7 +73,7 @@
             this.btnagregararticulo.Location = new System.Drawing.Point(177, 128);
             this.btnagregararticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregararticulo.Name = "btnagregararticulo";
-            this.btnagregararticulo.Size = new System.Drawing.Size(184, 53);
+            this.btnagregararticulo.Size = new System.Drawing.Size(276, 82);
             this.btnagregararticulo.TabIndex = 3;
             this.btnagregararticulo.Text = "AGREGAR ARTICULO";
             this.btnagregararticulo.UseVisualStyleBackColor = false;
@@ -103,7 +102,7 @@
             this.btnCategoria.Location = new System.Drawing.Point(177, 258);
             this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(184, 53);
+            this.btnCategoria.Size = new System.Drawing.Size(276, 82);
             this.btnCategoria.TabIndex = 7;
             this.btnCategoria.Text = "Categorias";
             this.btnCategoria.UseVisualStyleBackColor = false;
@@ -118,7 +117,7 @@
             this.btnMarca.Location = new System.Drawing.Point(177, 329);
             this.btnMarca.Margin = new System.Windows.Forms.Padding(2);
             this.btnMarca.Name = "btnMarca";
-            this.btnMarca.Size = new System.Drawing.Size(184, 53);
+            this.btnMarca.Size = new System.Drawing.Size(276, 82);
             this.btnMarca.TabIndex = 8;
             this.btnMarca.Text = "Marcas";
             this.btnMarca.UseVisualStyleBackColor = false;
@@ -126,17 +125,16 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(506, 393);
+            this.ClientSize = new System.Drawing.Size(759, 605);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btneliminararticulo);
             this.Controls.Add(this.btnagregararticulo);
             this.Controls.Add(this.btnlistar);
             this.Controls.Add(this.txtmenu);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
